@@ -1,0 +1,19 @@
+.footer {
+    padding: 35px 0 41px 0;
+    position: relative;
+    &::before {
+        content: '';
+        width: 100%;
+        height: 1px;
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
+        position: absolute;
+        top:0;
+    }
+}
+
+.contactsLogos {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    justify-content: end;
+}

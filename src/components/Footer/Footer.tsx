@@ -1,10 +1,13 @@
 import React from 'react';
-import './Footer.module.scss'
+import s from './Footer.module.scss';
+import ContactsIcons from '../ContactsIcons/ContactsIcons';
 
-const Footer = () => {
+const Footer: React.FC = () => {
     return (
-        <div>
-            
+        <div className={s.footer}>
+            <div className="wrapper">
+                <ContactsIcons className={s.contactsLogos}/>
+            </div>
         </div>
     );
 };

@@ -1,6 +1,113 @@
 .header {
+    padding: 20px 0 26px 0;
     &Content {
-        font-size: 22px;
+        // width: 50%;
+        //delete
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
     }
-
+    &Left {
+        position: relative;
+        border-left:  2px solid #FCD54C;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 152px;
+        &::before {
+            content: '';
+            border-top: 2px solid #FCD54C;
+            width: 35px;
+            height: 3px;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        &::after {
+            content: '';
+            border-bottom: 2px solid #FCD54C;
+            width: 35px;
+            height: 3px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+        & div {
+            padding: 7px 0px 15px 15px;
+        }
+    }
+    &Right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        & a {
+            font-family: 'Work Sans';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 16px;
+            display: flex;
+            align-items: flex-end;
+            color: #000000;
+            padding: 12px 14px 13px 14px;
+            background: #FCD54C;
+        }
+        & div {
+            padding: 0 53px 0 113px;
+            font-family: 'Gilroy';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 17px;
+            text-align: right;
+            text-transform: uppercase;
+            color: #929292;
+            display: flex;
+            gap: 8px;
+            //-------------поставить цвет
+        }
+        & p {
+            font-family: 'Gilroy';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 20px;
+            color: #FFFFFF;
+        }
+    }
+    &Nav {
+        display: flex;
+        gap: 40px;
+        //check
+        & a {
+            font-family: 'Gilroy';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 17px;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            //------ поставить
+        }
+    }
+    
+}
+.logo {
+    &TextB {
+        font-family: 'Gilroy';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 35px;
+        color: #FFFFFF;
+    }
+    &TextS {
+        font-family: 'Work Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 13px;
+        color: #FFFFFF;
+        opacity: 0.6;
+    }
 }
