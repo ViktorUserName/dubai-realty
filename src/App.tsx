@@ -1,11 +1,13 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.scss';
+import Footer from './components/Footer/Footer';
+import Header from './components/Header/Header';
 
 function App() {
   return (
     <>
-
+      <Header/>
+      <Footer/>
     </>
   );
 }
