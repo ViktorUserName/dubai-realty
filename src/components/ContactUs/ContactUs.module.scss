@@ -1,0 +1,54 @@
+.contact {
+    background: #272727;
+    &Content {
+        background: url(../../img/contactUs.png);
+        padding-top: 131px;
+        display: flex;
+        flex-direction: column;
+        gap: 54px;
+        align-items: center;
+        & h1 {
+            font-family: 'Gilroy';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 120px;
+            line-height: 69px;
+            text-align: center;
+            color: #272727;
+        }
+    }
+    &Input {
+        padding-bottom: 85px;
+        display: flex;
+        width: 472px;
+        //неправильно указан шир
+        & input {
+            width: 80%;
+            height: 61px;
+            padding-left: 42px;
+            border-width: 0px;
+        }
+        & input::placeholder {
+            font-family: 'Work Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 14px;
+            color: #272727;
+            opacity: 0.5;
+        }
+        & button {
+            width: 20%;
+            height: 61px;
+            font-family: 'Work Sans';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 16px;
+            color: #FFFFFF;
+            background: #272727;
+            border-width: 0px;
+            //-----------проаерить ширину
+        }
+    }
+}
