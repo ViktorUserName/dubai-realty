@@ -1,0 +1,48 @@
+.blogContent{
+    &Top{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        &Title{
+            font-family: 'Gilroy';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 60px;
+            line-height: 80px;
+            color: #FFFFFF;
+        }
+        &Search{
+            position: relative;
+            & input{
+                font-family: 'Gilroy';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 26px;
+                color: #929292;
+                background-color: inherit;
+                border: 1px solid #929292;
+                outline: none;
+                padding: 24px;
+                width: 813px;
+            }
+            & button{
+                background-color: inherit;
+                outline: none;
+                border: none;
+                cursor: pointer;
+                position: absolute;
+                top: 25px;
+                right: 20px;
+            }
+        }
+    }
+    &Main{
+        max-width: 1110px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+}
