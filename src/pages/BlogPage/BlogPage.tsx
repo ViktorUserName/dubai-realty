@@ -1,6 +1,9 @@
 import React from 'react';
 import s from "./BlogPage.module.scss";
 import search from "../../img/BlogPage/Search.svg";
+import BlogPageCard from './BlogPageCard/BlogPageCard';
+
+
 
 const BlogPage: React.FC = () => {
     return (
@@ -17,11 +20,10 @@ const BlogPage: React.FC = () => {
                                 <img src={search} alt="search icon" />
                             </button>
                         </div>
-                        <div className={s.blogContentMain}>
-                            <div className={s.blogContentMainCard}>
-                                
-                            </div>
-                        </div>
+                    </div>
+
+                    <div className={s.blogContentMain}>
+                        <BlogPageCard image={''} title={''} description={''}/>
                     </div>
                 </div>
             </div>
