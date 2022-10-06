@@ -13,6 +13,12 @@
   scroll-behavior: smooth; 
 }
 
+html,
+body {
+  height: 100%;
+  background: #272727;
+}
+
 .wrapper {
   max-width: 1830px;
   padding: 0 15px;
@@ -23,5 +29,5 @@ img {
   max-width: 100%;
   height: auto;
   width: auto;
- }
+}
 
