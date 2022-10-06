@@ -6,3 +6,23 @@
     line-height: 29px;
     color: #E8E8E8;
 }
+@mixin contactMapDescriptionText {
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
+    color: #FFFFFF;
+    @media (max-width: 768px) {
+        font-size: 14px;
+        line-height: 21px;
+    }
+}
+@mixin contactFormText {
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #929292;
+}
