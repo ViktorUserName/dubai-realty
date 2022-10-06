@@ -1,11 +1,13 @@
 import React from 'react';
+import BlogPageCard, { IBlogCard } from './BlogPageCard/BlogPageCard';
 import s from "./BlogPage.module.scss";
 import search from "../../img/BlogPage/Search.svg";
-import BlogPageCard from './BlogPageCard/BlogPageCard';
 
+interface IBlogCardProps{
+    cardConfig: IBlogCard[],
+}
 
-
-const BlogPage: React.FC = () => {
+const BlogPage: React.FC<IBlogCardProps> = ({cardConfig=[]}) => {
     return (
         <section>
             <div className='wrapper'>
@@ -21,9 +23,15 @@ const BlogPage: React.FC = () => {
                             </button>
                         </div>
                     </div>
-
                     <div className={s.blogContentMain}>
-                        <BlogPageCard image={''} title={''} description={''}/>
+                        {cardConfig.map((post) => 
+                            <BlogPageCard 
+                                key={post.id}
+                                id={post.id} 
+                                image={post.image} 
+                                title={post.title} 
+                                description={post.description}
+                        />)}
                     </div>
                 </div>
             </div>

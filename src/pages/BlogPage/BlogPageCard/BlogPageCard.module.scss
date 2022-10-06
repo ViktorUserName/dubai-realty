@@ -1,11 +1,20 @@
 .blogContentMainCard{
     max-width: 350px;
+    @media (max-width: 787px) {
+        max-width: 330px;
+    }
     & img{
         display: block;
+        height: 330px;
+        width: 350px;
+        object-fit: cover;
     }
     &Bottom{
         padding: 17px 30px 8px 30px;
         border: 1px solid #FCD54C;
+        @media (max-width: 397px) {
+            padding: 12px;
+        }
         &Title{
             font-family: 'Gilroy';
             font-style: normal;
@@ -22,6 +31,10 @@
             line-height: 26px;
             color: #929292;
             margin: 23px 0 13px;
+            @media (max-width: 357px) {
+                font-size: 14px;
+                line-height: 21px;
+            }
         }
     }
     &Btn{
