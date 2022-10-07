@@ -23,21 +23,24 @@ const Banner: React.FC = () => {
     return (
         <main className={s.banner}>
             <div className="wrapper">
-               <Swiper
-                    className={s.bannerSwiper}
-                    pagination={
-                        {clickable: true,
-                        renderBullet: function (index, className) {
-                                return ('<div class="' + className + '">' +'0'+ (index + 1) + '<p class="sliderText">'+ `Lorem Ipsum Dolorem apset` + "</pс>" +"</div>");
-                              },
+                <div className={s.bannerContent}>
+                <Swiper
+                        className={s.bannerSwiper}
+                        // className="bannerSwiper"
+                        pagination={
+                            {clickable: true,
+                            renderBullet: function (index, className) {
+                                    return ('<div class="' + className + '">' +'0'+ (index + 1) + '<p class="sliderText">'+ `Lorem Ipsum Dolorem apset` + "</pс>" +"</div>");
+                                },
+                            }
                         }
-                    }
-                    modules={[Pagination]}
-                    >
-                    <SwiperSlide><ContactsIcons className={s.bannerIcons}/><Card/></SwiperSlide>
-                    <SwiperSlide><ContactsIcons className={s.bannerIcons}/><Card/></SwiperSlide>
-                    <SwiperSlide><ContactsIcons className={s.bannerIcons}/><Card/></SwiperSlide>
-                </Swiper>
+                        modules={[Pagination]}
+                        >
+                        <SwiperSlide><ContactsIcons className={s.bannerIcons}/><Card/></SwiperSlide>
+                        <SwiperSlide><ContactsIcons className={s.bannerIcons}/><Card/></SwiperSlide>
+                        <SwiperSlide><ContactsIcons className={s.bannerIcons}/><Card/></SwiperSlide>
+                    </Swiper>
+            </div>
             </div>
         </main>
     );
