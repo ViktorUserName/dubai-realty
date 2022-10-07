@@ -1,10 +1,10 @@
 import React from 'react';
+import Banner from './blocks/Banner/Banner';
 
 const MainPage = () => {
     return (
-        <main>
-            
-        </main>
+        // <div className=""></div>
+        <Banner/>   
     );
 };
 
