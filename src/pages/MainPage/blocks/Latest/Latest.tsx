@@ -33,7 +33,7 @@ const LatestCard: React.FC = () => {
     )
 }
 
-const Latest = () => {
+const Latest: React.FC = () => {
     return (
         <div className={s.latest}>  
             <div className="wrapper">
