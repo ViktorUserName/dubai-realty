@@ -5,6 +5,8 @@ import Latest from './blocks/Latest/Latest';
 import Limit from './blocks/Limit/Limit';
 import data from '../../SharedLogic/LimitData.json'
 import ContactUs from '../../components/ContactUs/ContactUs';
+import Articules from './blocks/Articules/Articules';
+import Workers from './blocks/Worker/Workers';
 
 const MainPage = () => {
     const {results: posts} = data;
@@ -15,6 +17,8 @@ const MainPage = () => {
         <Expertise/>
         <Limit cardConfig={posts} /> 
         <ContactUs/>
+        <Articules/>
+        <Workers/>
         </>
     );
 };

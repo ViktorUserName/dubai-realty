@@ -1,0 +1,47 @@
+.workers {
+    &Wrapper {
+        padding: 0 405px;
+    }
+    &Cart {
+        width: 525px;
+        &Top {
+            & > p {
+                font-family: 'Work Sans';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 120px;
+                line-height: 200px;
+                color: #FCD54C;
+            }
+        }
+        &H2 {
+            font-family: 'Gilroy';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 25px;
+            line-height: 30px;
+            color: #FFFFFF;
+        }
+        &H3 {
+
+            font-family: 'Work Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+            color: #FFFFFF;
+            & > span {
+                color: #FCD54C;
+            }
+        }
+        &P {
+            font-family: 'Work Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 26px;
+            color: #929292;
+            max-width: 425px;
+        }
+    }
+}
