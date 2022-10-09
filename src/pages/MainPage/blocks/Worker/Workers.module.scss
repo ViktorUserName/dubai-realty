@@ -4,7 +4,14 @@
     }
     &Cart {
         width: 525px;
+        border: 1px solid #FCD54C;
+        padding: 0 25px 25px 25px;
         &Top {
+            display: flex;
+            flex-direction:row;
+            align-items: center;
+            justify-content: space-between;
+            max-height: 112px;
             & > p {
                 font-family: 'Work Sans';
                 font-style: normal;
@@ -12,6 +19,11 @@
                 font-size: 120px;
                 line-height: 200px;
                 color: #FCD54C;
+            }
+            & > img {
+                border-radius: 50%;
+                position: relative;
+                top: -62px;
             }
         }
         &H2 {
@@ -44,4 +56,12 @@
             max-width: 425px;
         }
     }
+    &Swiper {
+        // overflow: visible;
+        height: 500px;
+        & > .swiper-wrapper {
+            padding: 100px 0;
+        }
+    }
 }
+

@@ -4,12 +4,14 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/scss';
 import { Pagination } from 'swiper';
 import 'swiper/scss/pagination';
+import './workerSlider.scss'
+import workers from '../../../../img/workers1.png'
 
 const WorkersCart: React.FC = () => {
     return (
         <div className={s.workersCart}>
             <div className={s.workersCartTop}>
-                <img src="" alt="" />
+                <img src={workers} alt="" />
                 <p>”</p>
             </div>
             <h2 className={s.workersCartH2}>Paul</h2>
@@ -22,9 +24,14 @@ const WorkersCart: React.FC = () => {
 const Workers: React.FC= () => {
     return (
         <div className={s.workers}>
-            <div className={s.workersWrapper}>
+            {/* <div className={s.workersWrapper}> */}
                 <Swiper
                         className={s.workersSwiper}
+                        // className='ggg'
+                        slidesPerView={2}
+                        spaceBetween={30}
+                        // slidesPerGroup={2}
+                        centeredSlides={true}
                         pagination={
                             {clickable: true,
                             modifierClass: 'swiper-pagination-workers-'
@@ -32,12 +39,15 @@ const Workers: React.FC= () => {
                         }
                         modules={[Pagination]}
                         >
-                        <SwiperSlide><WorkersCart/></SwiperSlide>
-                        <SwiperSlide>2</SwiperSlide>
-                        <SwiperSlide>3</SwiperSlide>
+                        <SwiperSlide className='workerSliderSlide'><WorkersCart/><WorkersCart/></SwiperSlide>
+                        <SwiperSlide className='workerSliderSlide'><WorkersCart/><WorkersCart/></SwiperSlide>
+                        <SwiperSlide className='workerSliderSlide'><WorkersCart/><WorkersCart/></SwiperSlide>
+                        <SwiperSlide className='workerSliderSlide'><WorkersCart/><WorkersCart/></SwiperSlide>
+                        <SwiperSlide className='workerSliderSlide'><WorkersCart/><WorkersCart/></SwiperSlide>
+                        <SwiperSlide className='workerSliderSlide'><WorkersCart/><WorkersCart/></SwiperSlide>
                 </Swiper>
             </div>
-        </div>
+        // </div>
     );
 };
 
