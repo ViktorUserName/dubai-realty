@@ -1,0 +1,32 @@
+.bannerConteiner{
+    display: flex;
+    justify-content: center;
+    &Banner{
+        position: relative;
+    }
+    &Text{
+        position: absolute;
+        bottom: 8%;
+        left: 20%;
+        &Subtitle{
+            font-family: 'Work Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 26px;
+            color: #FFFFFF;
+        }
+        &Title{
+            font-family: 'Gilroy';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 60px;
+            line-height: 80px;
+            color: #FFFFFF;
+            max-width: 660px;
+            & span{
+                color: #FCD54C;
+            }
+        }
+    }
+}
