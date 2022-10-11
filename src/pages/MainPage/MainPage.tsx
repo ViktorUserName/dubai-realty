@@ -7,6 +7,7 @@ import data from '../../SharedLogic/LimitData.json'
 import ContactUs from '../../components/ContactUs/ContactUs';
 import Articules from './blocks/Articules/Articules';
 import Workers from './blocks/Worker/Workers';
+import Faq from '../Faq/Faq';
 
 const MainPage = () => {
     const {results: posts} = data;
@@ -19,6 +20,7 @@ const MainPage = () => {
         <ContactUs/>
         <Articules/>
         <Workers/>
+        <Faq/>
         </>
     );
 };
