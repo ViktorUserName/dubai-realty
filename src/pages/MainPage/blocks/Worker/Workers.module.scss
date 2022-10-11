@@ -1,0 +1,68 @@
+.workers {
+    padding-bottom: 100px;
+    &Wrapper {
+        padding: 0 405px;
+    }
+    &Cart {
+        width: 525px;
+        border: 1px solid #FCD54C;
+        padding: 0 25px 25px 25px;
+        &Top {
+            display: flex;
+            flex-direction:row;
+            align-items: center;
+            justify-content: space-between;
+            max-height: 112px;
+            & > p {
+                font-family: 'Work Sans';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 120px;
+                line-height: 200px;
+                color: #FCD54C;
+            }
+            & > img {
+                border-radius: 50%;
+                position: relative;
+                top: -62px;
+            }
+        }
+        &H2 {
+            font-family: 'Gilroy';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 25px;
+            line-height: 30px;
+            color: #FFFFFF;
+        }
+        &H3 {
+
+            font-family: 'Work Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+            color: #FFFFFF;
+            & > span {
+                color: #FCD54C;
+            }
+        }
+        &P {
+            font-family: 'Work Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 26px;
+            color: #929292;
+            max-width: 425px;
+        }
+    }
+    &Swiper {
+        // overflow: visible;
+        height: 500px;
+        & > .swiper-wrapper {
+            padding: 100px 0;
+        }
+    }
+}
+

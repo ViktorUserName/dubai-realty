@@ -1,0 +1,64 @@
+.blogContentMainCard{
+    max-width: 350px;
+    @media (max-width: 787px) {
+        max-width: 330px;
+    }
+    & img{
+        display: block;
+        height: 330px;
+        width: 350px;
+        object-fit: cover;
+    }
+    &Bottom{
+        padding: 17px 30px 8px 30px;
+        border: 1px solid #FCD54C;
+        @media (max-width: 397px) {
+            padding: 12px;
+        }
+        &Title{
+            font-family: 'Gilroy';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 25px;
+            line-height: 35px;
+            color: #FFFFFF;
+        }
+        &Description{
+            font-family: 'Gilroy';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 26px;
+            color: #929292;
+            margin: 23px 0 13px;
+            @media (max-width: 357px) {
+                font-size: 14px;
+                line-height: 21px;
+            }
+        }
+    }
+    &Btn{
+        position: relative;
+        font-family: 'Work Sans';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        color: #FFFFFF;
+        background-color: inherit;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        &::before{
+            position: absolute;
+            content: "";
+            top: 7px;
+            right: -14px;
+            width: 10px;
+            height: 10px;
+            border-top: 1px solid #FFFFFF;
+            border-right: 1px solid #FFFFFF;
+            transform: rotate(45deg);
+        }
+    }
+}

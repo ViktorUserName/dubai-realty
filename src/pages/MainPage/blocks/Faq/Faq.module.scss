@@ -1,0 +1,55 @@
+.faq {
+    padding-bottom: 122px;
+    &Content {
+        padding: 0 405px;
+    }
+    &H1 {
+        font-family: 'Gilroy';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 70px;
+        line-height: 60px;
+        color: #FFFFFF;
+        padding-bottom: 30px;
+    }
+    &Carts {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        // gap: 40px;
+        &:last-child::before {
+            content: '';
+            width: 100%;
+            border-top: 1px solid #929292;
+            height: 1px;
+            position: absolute;
+            bottom: 0;
+        }
+        &Item {
+            font-family: 'Work Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 130%;
+            color: #FFFFFF;
+            position: relative;
+            padding: 20px 0;
+            &::after {
+                content: '';
+                width: 100%;
+                border-top: 1px solid #929292;
+                height: 1px;
+                position: absolute;
+                top: 0;
+            }
+            &::before {
+                // content: '';
+                // width: 100%;
+                // border-top: 1px solid #929292;
+                // height: 1px;
+                // position: absolute;
+                // bottom: 0;
+            }
+        }
+    }
+}

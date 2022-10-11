@@ -12,6 +12,19 @@
   list-style-type: none;
   scroll-behavior: smooth; 
 }
+html, body {
+  background: #272727;
+}
+
+textarea{
+  resize: none;
+}
+
+html,
+body {
+  height: 100%;
+  background: #272727;
+}
 
 .wrapper {
   max-width: 1830px;
@@ -23,5 +36,5 @@ img {
   max-width: 100%;
   height: auto;
   width: auto;
- }
+}
 
