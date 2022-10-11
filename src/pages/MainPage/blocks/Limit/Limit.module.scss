@@ -1,0 +1,39 @@
+.limit {
+    padding-bottom: 115px;
+    &Content {
+        padding: 0 335px 0;
+    }
+    &H2 {
+        font-family: 'Gilroy';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 160%;
+        max-width: 919px;
+        border: 1px solid #FCD54C;
+        color: #FFFFFF;
+        text-align: center;
+        padding: 70px 95px 70px 95px;
+        margin-bottom: 113px;
+        box-sizing: content-box;
+        & > span {
+            color: #FCD54C;
+        }
+    }
+    &Cards {
+        display: flex;
+        gap: 23px;
+    }
+    &Card {
+        max-width: 543px;
+        &P {
+            padding-top: 70px;
+            font-family: 'Work Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 160%;
+            color: #E8E8E8;
+        }
+    }
+}

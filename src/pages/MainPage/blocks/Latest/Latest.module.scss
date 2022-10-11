@@ -1,0 +1,122 @@
+.latest {
+    padding: 125px 0 125px 0;
+
+    &Text {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 370px 125px;
+        &H1 {
+            font-family: 'Gilroy';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 48px;
+            line-height: 69px;
+            color: #FFFFFF;
+        }
+        &Examples {
+            font-family: 'Work Sans';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 21px;
+            & a {
+            color: #FFFFFF;
+                &:hover {
+                    color: #FCD54C;
+                }
+            }
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 34px;
+            & a:last-child {
+                font-family: 'Gilroy';
+                font-style: italic;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 21px;
+                color: #929292;
+                padding-left: 10px;
+            }
+        }
+
+    }
+    &Slider {
+        height: 682px;
+    }
+    &Card {
+        position: relative;
+        height: 572px;
+        width: 430px;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 53.94%, rgba(0, 0, 0, 0.8) 100%);
+        &Img {
+            position: absolute;
+            z-index: -2;
+        }
+        &Text {
+            font-family: 'Gilroy';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 45px;
+            color: #FFFFFF;
+            position: absolute;
+            top: 450px;
+            left: 40px;
+        }
+        &Back {
+            position: relative;
+            height: 572px;
+            width: 430px;
+            background: #FCD54C;
+            visibility: visible;
+            opacity: 1;
+            transition: all 2s ease; 
+            & > img {
+                transition-delay: 1.5s;
+                visibility: hidden;
+                opacity: 0;
+            }
+            & > .latestCardText {
+                transition-delay: 0.1s;
+                visibility: hidden;
+                opacity: 0;
+            }
+            &Text {
+                display: flex;
+                flex-direction: column;
+                padding: 46px 0 30px 44px;
+                align-items: flex-start;
+                gap: 130px;
+                &H2{
+                    font-family: 'Gilroy';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 32px;
+                    line-height: 45px;
+                    color: #272727;
+                }
+                &P {
+                    font-family: 'Work Sans';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 22px;
+                    line-height: 26px;
+                    color: #272727;
+                    max-width: 339px;
+                }
+                &Button {
+                    border: none;
+                    background: none;
+                    font-family: 'Work Sans';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 20px;
+                    line-height: 23px;
+                    color: #272727;
+                }
+            }
+        }
+    }
+}
