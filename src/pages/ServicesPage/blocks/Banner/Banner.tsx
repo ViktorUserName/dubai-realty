@@ -4,14 +4,14 @@ import banner from "../../../../img/ServicesPage/Banner.png"
 
 const Banner: FC = () => {
     return (
-        <div className={s.bannerConteiner}>
-            <div className={s.bannerConteinerBanner}>
+        <div className={s.bannerContent}>
+            <div className={s.bannerContentBanner}>
                 <img src={banner} alt="banner img" />
-                <div className={s.bannerConteinerText}>
-                    <p className={s.bannerConteinerTextSubtitle}>
+                <div className={s.bannerContentText}>
+                    <p className={s.bannerContentTextSubtitle}>
                     Rent
                     </p>
-                    <h1 className={s.bannerConteinerTextTitle}>
+                    <h1 className={s.bannerContentTextTitle}>
                     Furnished Apartments <span>in Dubai</span>
                     </h1>
                 </div>
