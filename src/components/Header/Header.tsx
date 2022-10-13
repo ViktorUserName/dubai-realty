@@ -1,17 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
+import BurgerMenu from './BurgerMenu/BurgerMenu';
 import s from './Header.module.scss'
-import logoRec from '../../img/logoRec.svg'
 
 const Header: React.FC = () => {
+
+    const [menuActive, setMenuActive] = useState(false);
+
+    const burgerMenuActive = () => setMenuActive(!menuActive)
+
     return (
         <div className={s.header}>
             <div className="wrapper">
                 <div className={s.headerContent}>
                     <div className={s.headerLeft}>
-                        <div className={s.logo}>
+                        <a href='#' className={s.logo}>
                             <p className={s.logoTextB}>DubaiRealty</p>
                             <p className={s.logoTextS}>Real Estate</p>
-                        </div>
+                        </a>
                         <nav className={s.headerNav}>
                             <a href="#" className="">BUY</a>
                             <a href="#" className="">BLOG</a>
@@ -20,13 +25,26 @@ const Header: React.FC = () => {
                         </nav>
                     </div>
                     <div className={s.headerRight}> 
-                        <a href="#">Book a consultation</a>
-                        <div>
-                            <p>EN</p>
-                            <p>RU</p>  
+                        <button 
+                            className={s.headerRightBtn}
+                            type='button'>
+                                Book a consultation
+                        </button>
+                        <a 
+                            className={s.headerRightNumber}
+                            href="tel: +7 (212) 674-25-10">
+                                +7 (212) 674-25-10
+                        </a>
+                        <div
+                            onClick= {burgerMenuActive}
+                            className={s.headerRightBurger}
+                        >
+                            <span></span>
+                            <span></span>
+                            <span></span>
                         </div>
-                        <p>+7 (212) 674-25-10</p>
                     </div>
+                    <BurgerMenu change={menuActive} onClick={burgerMenuActive}/>
                 </div>
             </div>
         </div>
