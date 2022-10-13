@@ -5,6 +5,7 @@ import Challenge from './blocks/Challenge/Challenge';
 import Description from './blocks/Description/Description';
 import Methods from './blocks/Methods/Methods';
 import Package from './blocks/Package/Package';
+import Propose from './blocks/Propose/Propose';
 import Skills from './blocks/Skills/Skills';
 import s from "./ServicesPage.module.scss";
 
@@ -20,6 +21,7 @@ const ServicesPage: FC = () => {
                     <Challenge/>
                     {/* <ContactUs/> */}
                     <Package/>
+                    <Propose/>
                 </section>
             </div>
         </>
