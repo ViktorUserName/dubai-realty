@@ -1,0 +1,56 @@
+.bannerContent{
+    display: flex;
+    justify-content: center;
+    &Banner{
+        position: relative;
+    }
+    &Text{
+        position: absolute;
+        bottom: 8%;
+        left: 20%;
+        @media (max-width: 1017px) {
+            bottom: 8%;
+            left: 8%;
+        }
+        @media (max-width: 627px) {
+            bottom: 4%;
+            left: 4%;
+        }
+        &Subtitle{
+            font-family: 'Work Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 26px;
+            color: #FFFFFF;
+            @media (max-width: 1017px) {
+                font-size: 16px;
+            }
+            @media (max-width: 627px) {
+                font-size: 14px;
+            }
+        }
+        &Title{
+            font-family: 'Gilroy';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 60px;
+            line-height: 80px;
+            color: #FFFFFF;
+            max-width: 660px;
+            @media (max-width: 1017px) {
+                font-size: 40px;
+                line-height: 50px;
+                max-width: 417px;
+            }
+            @media (max-width: 627px) {
+                font-size: 24px;
+                line-height: 30px;
+                max-width: 247px;
+            }
+            & span{
+                color: #FCD54C;
+            }
+        }
+    }
+}

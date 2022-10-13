@@ -1,0 +1,55 @@
+.packageContent{
+    width: 68%;
+    margin: 100px  auto;
+    text-align: left;
+    @media (max-width: 1077px) {
+        width: 90%;
+    }
+    @media (max-width: 457px) {
+        width: 98%;
+    }
+    &Title th{
+        background: #FCD54C;
+        font-family: 'Gilroy';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        color: #272727 ;
+        padding:0 20px;
+        height: 72px;
+        &:not(:first-child){
+            text-align: center;
+        }
+        @media (max-width: 457px) {
+            font-weight: 700;
+            font-size: 12px;
+            padding:0 10px;
+        }
+    }
+    tr{
+        height: 50px;
+        &:nth-child(even){
+            background: rgba(255, 255, 255, 0.1);
+        }
+        & td{
+            padding-left: 20px;
+            font-family: 'Work Sans';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 26px;
+            color: #FFFFFF;
+            &:not(:first-child){
+                color: #FCD54C;
+                text-align: center;
+            }
+            @media (max-width: 847px) {
+                padding: 12px;
+            }
+            @media (max-width: 457px) {
+                font-size: 12px;
+            }
+        }
+    }
+}

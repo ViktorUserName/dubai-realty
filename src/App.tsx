@@ -3,6 +3,7 @@ import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import BlogPage from './pages/BlogPage/BlogPage';
 import ContactPage from './pages/ContactPage/ContactPage';
+import ServicesPage from './pages/ServicesPage/ServicesPage';
 import data from "./SharedLogic/BlogData.json";
 
 function App() {
@@ -13,7 +14,8 @@ function App() {
     <>
       {/* <Header/> */}
       {/* <BlogPage cardConfig={posts}/> */}
-      <ContactPage/>
+      {/* <ContactPage/> */}
+      <ServicesPage/>
       <Footer/>
     </>
   );

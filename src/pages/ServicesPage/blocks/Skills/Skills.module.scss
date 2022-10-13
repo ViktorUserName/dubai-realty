@@ -1,0 +1,66 @@
+.skillsContent{
+    margin: 100px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    @media (max-width: 807px) {
+        gap: 60px;
+    }
+    @media (max-width: 507px) {
+        gap: 50px;
+    }
+    &Images{
+        display: flex;
+        gap: 2%;
+        margin: auto;
+        max-width: 1110px;
+        @media (max-width: 507px) {
+            flex-direction: column;
+            gap: 10px;
+        }
+        &Left{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            @media (max-width: 507px) {
+                gap: 10px;
+            }
+        }
+    }
+    &Numbers{
+        display: flex;
+        gap: 90px;
+        max-width: 730px;
+        margin: auto;
+        @media (max-width: 807px) {
+            gap: 60px;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        @media (max-width: 507px) {
+            gap: 20px;
+        }
+        &Block{
+            display: flex;
+            gap: 24px;
+            align-items: center;
+        }
+        &Text{
+            font-family: 'Gilroy';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 21px;
+            color: #FFFFFF;
+            max-width: 90px;
+        }
+        &Count{
+            font-family: 'Work Sans';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 60px;
+            line-height: 70px;
+            color: #FCD54C;
+        }
+    }
+}
