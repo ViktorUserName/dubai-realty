@@ -1,0 +1,102 @@
+.appart{
+    &Content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    &H1 {
+        font-family: 'Gilroy';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 60px;
+        line-height: 80px;
+        color: #fffFFFFF;
+        padding-bottom: 85px;
+    }
+    &Slider {
+        padding-bottom: 144px;
+        &Init {
+            height: 488px;
+        }
+    }
+}
+
+.cart {
+    width: 426px;
+    height: 433px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 137px;
+    opacity: 1;
+    transition: all 2s ease; 
+    & img {
+        z-index: -1;
+        position: absolute;
+    }
+    &H2 {
+        font-family: 'Gilroy';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 26px;
+        color: #FFFFFF;
+    }
+    &Button {
+        border: none;
+        background: none;
+        font-family: 'Work Sans';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        color: #FFFFFF;
+        position: relative;
+        top: -39px;
+        left: 134px;
+        cursor: pointer;
+        &Back {
+            color: #272727;
+        }
+    }
+    &Back {
+        width: 426px;
+        height: 433px;
+        background: #FCD54C;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        visibility: visible;
+        opacity: 1;
+        transition: all 2s ease; 
+        & img {
+            visibility: hidden;
+        }
+        &H1 {
+            font-family: 'Gilroy';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 48px;
+            line-height: 26px;
+            color: #272727;
+            position: relative;
+            top: -200px;
+        }
+        &H2 {
+            visibility: hidden;
+            &N {
+                font-family: 'Work Sans';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 22px;
+                line-height: 26px;
+                color: #272727;
+                max-width: 365px;
+                position: relative;
+                top: -130px;
+            }
+        }
+    }
+}

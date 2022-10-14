@@ -1,0 +1,77 @@
+{
+    "results": [
+        {
+            "id": 1,
+            "img": "https://i.ibb.co/1Lx760d/426x386.png",
+            "textUp":"Villa",
+            "h1":"Dubai Hills Estate"        
+        },
+        {
+            "id": 2,
+            "img": "https://i.ibb.co/8mqkhtm/426x581-6.png",
+            "textUp":"Commercial",
+            "h1":"Shell and Core"        
+        },
+        {
+            "id": 3,
+            "img": "https://i.ibb.co/K6zGDvP/426x581-5.png",
+            "textUp":"Apartments",
+            "h1":"Luxury Living"        
+        },
+        {
+            "id": 4,
+            "img": "https://i.ibb.co/Ln4g818/426x581-4.png",
+            "textUp":"Townhous",
+            "h1":"Arabian Ranches"        
+        },
+        {
+            "id": 5,
+            "img": "https://i.ibb.co/1Lx760d/426x386.png",
+            "textUp":"Villa",
+            "h1":"Dubai Hills Estate"        
+        },
+        {
+            "id": 6,
+            "img": "https://i.ibb.co/8mqkhtm/426x581-6.png",
+            "textUp":"Commercial",
+            "h1":"Shell and Core"        
+        },
+        {
+            "id": 7,
+            "img": "https://i.ibb.co/K6zGDvP/426x581-5.png",
+            "textUp":"Apartments",
+            "h1":"Luxury Living"        
+        },
+        {
+            "id": 8,
+            "img": "https://i.ibb.co/Ln4g818/426x581-4.png",
+            "textUp":"Townhous",
+            "h1":"Arabian Ranches"        
+        },
+        {
+            "id": 9,
+            "img": "https://i.ibb.co/1Lx760d/426x386.png",
+            "textUp":"Villa",
+            "h1":"Dubai Hills Estate"        
+        },
+        {
+            "id": 10,
+            "img": "https://i.ibb.co/8mqkhtm/426x581-6.png",
+            "textUp":"Commercial",
+            "h1":"Shell and Core"        
+        },
+        {
+            "id": 11,
+            "img": "https://i.ibb.co/K6zGDvP/426x581-5.png",
+            "textUp":"Apartments",
+            "h1":"Luxury Living"        
+        },
+        {
+            "id": 12,
+            "img": "https://i.ibb.co/Ln4g818/426x581-4.png",
+            "textUp":"Townhous",
+            "h1":"Arabian Ranches"        
+        }
+
+        ]
+    }

@@ -1,0 +1,53 @@
+.card {
+    width: 426px;
+    // height: 879px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    
+    &Text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 17px;
+        padding: 38px 0px 28px 38px;
+        // max-width: 426px;
+        border: 1px solid #FCD54C;
+
+    }
+    &Button {
+        background: none;
+        border: none;
+        font-family: 'Work Sans';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        color: #FFFFFF;
+    }
+    &PU {
+        font-family: 'Work Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        color: #FFFFFF;
+    }
+    &H1 {
+        font-family: 'Gilroy';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 35px;
+        color: #FFFFFF;
+    }
+    &PD {
+        font-family: 'Work Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        color: #929292;
+        max-width: 280px;
+    }
+}

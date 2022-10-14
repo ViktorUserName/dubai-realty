@@ -1,5 +1,5 @@
 .faq {
-    padding-bottom: 122px;
+    // padding-bottom: 122px;
     &Content {
         padding: 0 405px;
     }
@@ -34,6 +34,21 @@
             color: #FFFFFF;
             position: relative;
             padding: 20px 0;
+            &Main {
+                display: flex;
+                align-items: center;
+                justify-content: space-between; 
+            }
+            &Inherit {
+                padding: 33px 20px;
+                font-family: 'Work Sans';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 160%;
+                color: #E8E8E8;
+                max-width: 980px;
+            }
             &::after {
                 content: '';
                 width: 100%;
@@ -41,6 +56,13 @@
                 height: 1px;
                 position: absolute;
                 top: 0;
+            }
+            & button {
+                background: none;
+                border: none;
+                color: #FCD54C;
+                cursor: pointer;
+                font-size: 30px;
             }
             &::before {
                 // content: '';

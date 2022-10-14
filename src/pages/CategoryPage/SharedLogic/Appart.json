@@ -1,0 +1,29 @@
+{
+    "results": [
+        {
+            "id": 5,
+            "img": "https://i.ibb.co/v4n303Y/2.png",
+            "textH2": "Townhouse"
+        },
+        {
+            "id": 6,
+            "img": "https://i.ibb.co/cgF6ktZ/3.png",
+            "textH2": "Villa"
+        },
+        {
+            "id": 7,
+            "img": "https://i.ibb.co/v4n303Y/2.pngg",
+            "textH2": "Commercial"
+        },
+        {
+            "id": 8,
+            "img": "https://i.ibb.co/cgF6ktZ/3.png",
+            "textH2": "Consequat"
+        },
+        {
+            "id": 9,
+            "img": "https://i.ibb.co/v4n303Y/2.png",
+            "textH2": "Townhous2"
+        }
+        ]
+    }

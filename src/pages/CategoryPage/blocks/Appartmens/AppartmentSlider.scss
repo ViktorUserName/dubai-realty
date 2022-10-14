@@ -1,0 +1,11 @@
+.swiper-pagination.swiper-pagination-clickable.swiper-pagination-appart-bullets.swiper-pagination-horizontal {
+    bottom: 0px;
+    left: 50%;
+    display: flex;
+    gap: 13px;
+    & > span {
+        background: #FCD54C;
+        width: 13px;
+        height: 13px;
+    }
+}

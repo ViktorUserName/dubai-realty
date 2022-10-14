@@ -1,0 +1,40 @@
+@import "../../../../mixin.scss";
+
+.challengeContent{
+    max-width: 730px;
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 46px;
+    @media (max-width: 500px) {
+        gap: 30px;
+        margin: 50px auto;
+    }
+    &Text{
+        &Title{
+            font-family: 'Gilroy';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 25px;
+            line-height: 35px;
+            color: #FFFFFF;
+            margin-bottom: 30px;
+            @media (max-width: 500px) {
+                font-size: 22px;
+            }
+        }
+        &Description{
+            @include servicesDescriptionText;
+        }
+        &List {
+            border-top: 1px solid #929292;
+            padding-top: 65px;
+            @media (max-width: 500px) {
+                padding-top: 30px;
+            }
+            & li{
+                list-style-type: disc; 
+            }
+        }
+    }
+}

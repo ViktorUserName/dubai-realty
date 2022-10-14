@@ -1,3 +1,13 @@
+.wrapper{
+    max-width: 1830px;
+    padding: 0 15px;
+    margin: 0 auto;
+    @media (max-width: 947px) {
+        max-width: none;
+        padding: 0;
+        margin: 0;
+    }
+}
 .contact {
     background: #272727;
     &Content {
@@ -5,9 +15,12 @@
         padding-top: 131px;
         display: flex;
         flex-direction: column;
-        gap: 54px;
+        gap: 15px;
         align-items: center;
-        & h1 {
+        @media (max-width: 947px) {
+            gap: 0px;
+        }
+        & h2 {
             font-family: 'Gilroy';
             font-style: normal;
             font-weight: 700;
@@ -15,18 +28,48 @@
             line-height: 69px;
             text-align: center;
             color: #272727;
+            @media (max-width: 947px) {
+                font-size: 70px;
+                line-height: 87px;
+            }
+            @media (max-width: 477px) {
+                font-size: 50px;
+                line-height: 62px;
+            }
+        }
+        & p{
+            font-family: 'Work Sans';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 160%;
+            text-align: center;
+            color: #272727;
+            @media (max-width: 947px) {
+                font-size: 12px;
+                line-height: 14px;
+            }
         }
     }
     &Input {
         padding-bottom: 85px;
         display: flex;
         width: 472px;
-        //неправильно указан шир
+        margin-top: 54px;
+        @media (max-width: 947px) {
+            margin-top: 4px;
+            width: 450px;
+        }
+        @media (max-width: 477px) {
+            margin-top: 30px;
+            width: 288px;
+        }
         & input {
             width: 80%;
             height: 61px;
             padding-left: 42px;
-            border-width: 0px;
+            border: none;
+            outline: none;
         }
         & input::placeholder {
             font-family: 'Work Sans';
@@ -47,8 +90,12 @@
             line-height: 16px;
             color: #FFFFFF;
             background: #272727;
-            border-width: 0px;
-            //-----------проаерить ширину
+            border: none;
+            outline: none;
+            cursor: pointer;
+            @media (max-width: 947px) {
+                width: 40%;
+            }
         }
     }
 }

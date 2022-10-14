@@ -1,0 +1,69 @@
+@import "/src/mixin.scss";
+
+.methodContent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+    margin: 40px 0;
+    &Text{
+        max-width: 728px;
+        &Title{
+            @include servicesTitleText;
+        }
+        &Description{
+            margin-top: 50px;
+            @include servicesDescriptionText;
+        }
+    }
+    &Quote{
+        max-width: 730px;
+        border: 4px solid #FCD54C;
+        padding: 40px 72px 34px 40px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        @media (max-width: 768px) {
+            max-width: 690px;
+        }
+        @media (max-width: 647px) {
+            max-width: 290px;
+            flex-direction: column;
+            padding: 8px 20px;
+        }
+        & img{
+            margin-right: 40px;
+            @media (max-width: 647px) {
+                margin-bottom: 40px;
+            }
+        }
+        &Text{
+            &Description{
+                font-family: 'Gilroy';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 35px;
+                color: #FFFFFF;
+                @media (max-width: 500px) {
+                    font-size: 18px;
+                    line-height: 27px;
+                }
+            }
+            &Author{
+                margin-top: 28px;
+                @include servicesDescriptionText;
+                font-weight: 700;
+                color: #FFFFFF;
+                }
+                @media (max-width: 647px) {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+                }
+                &Status{
+                    color: #929292;
+                }
+            }
+        }
+    }

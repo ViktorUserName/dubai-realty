@@ -1,0 +1,100 @@
+.foot {
+    margin-top: 130px;
+    position: relative;
+    &::before {
+        content: "";
+        width: 100%;
+        height: 1px;
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
+        position: absolute;
+        top: 0;
+    }
+    &Content {
+        padding: 70px 0 50px 0;
+    }
+    &Logo {
+        display: flex;
+        justify-content: center;
+        &Cont {
+            position: relative;
+            border-left:  2px solid #FCD54C;
+            padding: 15px 0 15px 15px;
+            &::before {
+            content: '';
+            border-top: 2px solid #FCD54C;
+            width: 35px;
+            height: 3px;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        &::after {
+            content: '';
+            border-bottom: 2px solid #FCD54C;
+            width: 35px;
+            height: 3px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+    }
+        &B {
+            font-family: 'Gilroy';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 28px;
+            line-height: 35px;
+            color: #FFFFFF;
+        }
+        &S {
+            font-family: 'Work Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 11px;
+            line-height: 13px;
+            color: #FFFFFF;
+            opacity: 0.6;
+        }
+    }
+    &Options {
+        display: flex;
+        flex-direction: row;
+        gap: 184px;
+        font-family: 'Work Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 21px;
+        color: #E8E8E8;
+        &Text {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;  
+            &H1 {
+                padding: 50px 0 20px 0;
+            }
+            &A {
+            font-family: 'Work Sans';
+            font-style: normal;
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 21px;
+            color: #E8E8E8;
+        }
+    }
+    }
+}
+
+.button {
+    margin-top: 70px;
+    width: 165px;
+    height: 41px;
+    background: #FCD54C;
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    color: #000000;
+    cursor: pointer;
+}
