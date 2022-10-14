@@ -1,0 +1,76 @@
+.burgerMenu{
+    position: absolute;
+    transform: translateX(-500%);
+    top: 116px;
+    &Active{
+        transform: translateX(0);
+        position: absolute;
+        top: 96px;
+        width: 100%;
+        height: calc(100vh - 116px);
+        background: #272727;
+        z-index: 100;
+        @media (min-width: 1107px) {
+            display: none;
+        }
+    }
+    &Content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 70px 0;
+        background: #272727;
+        &Top{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 20px;
+            &Link{
+                font-family: 'Gilroy';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 36px;
+                line-height: 44px;
+                text-transform: uppercase;
+                color: #FFFFFF;
+                max-width: 200px;
+            }
+        }
+        &Bottom{
+            margin: 38px 0;
+            padding: 38px 0;
+            border-top: 1px solid #FCD54C;
+            width: 288px;
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            gap: 38px;
+            @media (max-width: 627px) {
+                display: flex;
+            }
+            &Number {
+                font-family: 'Gilroy';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 20px;
+                color: #FFFFFF;
+            }
+            &Btn {
+                font-family: 'Work Sans';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 16px;
+                display: flex;
+                align-items: flex-end;
+                color: #000000;
+                padding: 12px 14px 13px 14px;
+                background: #FCD54C;
+                cursor: pointer;
+                outline: none;
+                border: none;
+            }
+        }
+    }
+}

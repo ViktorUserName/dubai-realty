@@ -2,11 +2,10 @@
     background: #272727;
     padding: 20px 0 26px 0;
     &Content {
-        // width: 50%;
-        //delete
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        position: relative;
     }
     &Left {
         position: relative;
@@ -33,7 +32,7 @@
             left: 0;
             bottom: 0;
         }
-        & div {
+        & a {
             padding: 7px 0px 15px 15px;
         }
     }
@@ -41,7 +40,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        & a {
+        gap: 40px;
+        &Btn {
             font-family: 'Work Sans';
             font-style: normal;
             font-weight: 600;
@@ -52,28 +52,39 @@
             color: #000000;
             padding: 12px 14px 13px 14px;
             background: #FCD54C;
+            cursor: pointer;
+            outline: none;
+            border: none;
+            @media (max-width: 627px) {
+                display: none;
+            }
         }
-        & div {
-            padding: 0 53px 0 113px;
-            font-family: 'Gilroy';
-            font-style: normal;
-            font-weight: 600;
-            font-size: 14px;
-            line-height: 17px;
-            text-align: right;
-            text-transform: uppercase;
-            color: #929292;
-            display: flex;
-            gap: 8px;
-            //-------------поставить цвет
-        }
-        & p {
+        &Number {
             font-family: 'Gilroy';
             font-style: normal;
             font-weight: 600;
             font-size: 16px;
             line-height: 20px;
             color: #FFFFFF;
+            @media (max-width: 627px) {
+                display: none;
+            }
+        }
+        &Burger{
+            display: none;
+            justify-content: space-between;
+            flex-direction: column;
+            height: 11.5px;
+            width: 15.5px;
+            cursor: pointer;
+            & span{
+                height: 2px;
+                width: 15.5px;
+                background: #FFFFFF;
+            }
+            @media (max-width: 1107px) {
+                display: flex;
+            }
         }
     }
     &Nav {
@@ -89,6 +100,9 @@
             text-transform: uppercase;
             color: #FFFFFF;
             //------ поставить
+        }
+        @media (max-width: 1107px) {
+            display: none;
         }
     }
     
