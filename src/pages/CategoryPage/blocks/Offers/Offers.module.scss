@@ -1,0 +1,19 @@
+.offers {
+    padding-bottom: 210px;
+    &H1 {
+        font-family: 'Gilroy';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 60px;
+        line-height: 80px;
+        text-align: center;
+        color: #FFFFFF;
+        padding-bottom: 40px;
+    }
+    &Carts {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+    }
+}

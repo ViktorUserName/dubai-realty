@@ -1,0 +1,31 @@
+.text {
+    padding: 0 521px;
+    & p:last-child {
+        padding-bottom: 160px;
+    }
+    &H1 {
+        font-family: 'Gilroy';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 60px;
+        line-height: 35px;
+        color: #FFFFFF;
+    }
+    &P {
+        font-family: 'Work Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        color: #929292;
+        padding: 50px 0 80px 0;
+    }
+    &H2 {
+        font-family: 'Gilroy';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 26px;
+        color: #FFFFFF;
+    }
+}

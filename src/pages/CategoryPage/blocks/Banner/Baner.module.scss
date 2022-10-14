@@ -1,0 +1,28 @@
+.banner {
+    // padding-bottom: 120px;
+    // position: relative;
+    &Content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &Img {
+        width: 100%;
+        height: 100%;
+    }
+    &H1 {
+        width: 380px;
+        font-family: 'Gilroy';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 60px;
+        line-height: 80px;
+        text-align: center;
+        color: #FFFFFF;
+        & span {
+            color: #FCD54C;
+        }
+        position: relative;
+        top: -230px;
+    }
+}
