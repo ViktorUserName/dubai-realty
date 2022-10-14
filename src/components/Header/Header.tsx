@@ -1,16 +1,15 @@
 import React, { useState } from 'react';
 import BurgerMenu from './BurgerMenu/BurgerMenu';
 import s from './Header.module.scss'
+import PopupWindow from './PopupWindow/PopupWindow';
 
-interface BurgerCross {
-    change?: boolean;
-}
-
-const Header: React.FC<BurgerCross> = ({change}) => {
+const Header: React.FC = () => {
 
     const [menuActive, setMenuActive] = useState(false);
-
     const burgerMenuActive = () => setMenuActive(!menuActive)
+
+    const [popupActive, setPopupActive] = useState(false);
+    const popupMenuActive = () => setPopupActive(!popupActive)
 
     return (
         <div className={s.header}>
@@ -31,6 +30,7 @@ const Header: React.FC<BurgerCross> = ({change}) => {
                     <div className={s.headerRight}> 
                         <button 
                             className={s.headerRightBtn}
+                            onClick= {popupMenuActive}
                             type='button'>
                                 Book a consultation
                         </button>
@@ -48,9 +48,10 @@ const Header: React.FC<BurgerCross> = ({change}) => {
                             <span></span>
                         </div>
                     </div>
-                    <BurgerMenu change={menuActive} onClick={burgerMenuActive}/>
+                    <PopupWindow change={popupActive} onClick={popupMenuActive}/>
                 </div>
             </div>
+                <BurgerMenu change={menuActive} onClick={burgerMenuActive}/>
         </div>
     );
 };

@@ -1,0 +1,88 @@
+.popupWindow{
+    display: none;
+    &Active{
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        z-index: 1000;
+    }
+    &Wrapper{
+        position: relative;
+        margin: 10px;
+        & svg{
+            top: 10px;
+            right: 10px;
+            position: absolute;
+            cursor: pointer;
+        }
+    }
+    &Content{
+        background: #FFFFFF;
+        padding: 60px 140px;
+        @media (max-width: 787px) {
+            padding: 30px 20px;
+        }
+        &Title{
+            font-family: 'Gilroy';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 48px;
+            line-height: 59px;
+            text-align: center;
+            color: #000000;
+            @media (max-width: 787px) {
+                font-size: 38px;
+                line-height: 40px;
+            }
+        }
+        &Subtitle{
+            font-family: 'Work Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 23px;
+            text-align: center;
+            color: #000000;
+            margin: 7px 0 47px 0;
+            @media (max-width: 787px) {
+                font-size: 15px;
+            }
+        }
+        &Form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            & input{
+                padding-bottom: 10px;
+                border: none;
+                border-bottom: 1px solid #929292;
+                width: 453px;
+                outline: none;
+                @media (max-width: 557px) {
+                    width: 230px;
+                }
+            }
+            & button{
+                border: none;
+                outline: none;
+                cursor: pointer;
+                width: 216px;
+                height: 54px;
+                font-family: 'Work Sans';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 21px;
+                color: #000000;
+                background: #FCD54C;
+            }
+        }
+    }
+}
