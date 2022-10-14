@@ -7,6 +7,7 @@ import ContactUs from '../../components/ContactUs/ContactUs'
 import s from './CategoryPage.module.scss'
 import DataAppart from './SharedLogic/Appart.json'
 import DataOffers from './SharedLogic/offersCard.json'
+import AddFooter from '../../components/AddFooter/AddFooter';
 
 
 const CategoryPage: React.FC = () => {
@@ -22,7 +23,7 @@ const CategoryPage: React.FC = () => {
         <Offers cardConfigOffers={postOffers}/>
         <TextAppart/>
         <ContactUs/>
-        //// добавить предфуттер и паддинг
+        <AddFooter/>
         </>
     );
 };
