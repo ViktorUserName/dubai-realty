@@ -2,7 +2,11 @@ import React, { useState } from 'react';
 import BurgerMenu from './BurgerMenu/BurgerMenu';
 import s from './Header.module.scss'
 
-const Header: React.FC = () => {
+interface BurgerCross {
+    change?: boolean;
+}
+
+const Header: React.FC<BurgerCross> = ({change}) => {
 
     const [menuActive, setMenuActive] = useState(false);
 

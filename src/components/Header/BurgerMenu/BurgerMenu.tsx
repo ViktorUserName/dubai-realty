@@ -21,7 +21,7 @@ const BurgerMenu: FC<MenuСondition> = (props) => {
                 onClick={e => e.stopPropagation()}
             >
                 <div className={s.burgerMenuContentTop}>
-                    <a className={s.burgerMenuContentTopLink} href="#">
+                    <a className={s.burgerMenuContentTopLink} href="#" onClick={props.onClick}>
                     Buy
                     </a>
                     <a className={s.burgerMenuContentTopLink} href="#">
