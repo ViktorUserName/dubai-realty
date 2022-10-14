@@ -17,9 +17,7 @@ function App() {
   return (
     <>
       <Header/>
-      {/* <BlogPage cardConfig={posts}/> */}
-      <ContactPage/>
-      {/* <ContactUs/> */}
+      <MainPage/>
       <Footer/>
     </>
   );
