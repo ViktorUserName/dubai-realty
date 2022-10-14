@@ -9,20 +9,22 @@ import Articules from './blocks/Articules/Articules';
 import Workers from './blocks/Worker/Workers';
 import Faq from './blocks/Faq/Faq';
 import AddFooter from '../../components/AddFooter/AddFooter';
+import faqData from '../../SharedLogic/FaqData.json'
 
 
 const MainPage = () => {
-    const {results: posts} = data;
+    const {results: postsLimit} = data;
+    const {results: postsFaq} = faqData;
     return (
         <>
         <Banner/>
         <Latest/>
         <Expertise/>
-        <Limit cardConfig={posts} /> 
+        <Limit cardConfig={postsLimit} /> 
         <ContactUs/>
         <Articules/>
         <Workers/>
-        <Faq/>
+        <Faq cardFaqConfig={postsFaq}/>
         <AddFooter/>
         </>
     );
