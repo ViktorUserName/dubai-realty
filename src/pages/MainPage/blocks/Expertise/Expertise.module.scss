@@ -31,10 +31,8 @@
     &Video {
         position: relative;
         padding-bottom: 120px;
-        &Play {
-            position: absolute;
-            top: 46%;
-            left: 46%;
+        & video{
+            cursor: pointer;
         }
     }
 }
