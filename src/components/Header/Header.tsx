@@ -21,7 +21,14 @@ const Header: React.FC = () => {
                             <p className={s.logoTextS}>Real Estate</p>
                         </a>
                         <nav className={s.headerNav}>
-                            <a href="#" className="">BUY</a>
+                            <a href="#" className={s.test1Option}>
+                                <span>buy</span>
+                                <div className={s.test1}>
+                                    <span>Category</span>
+                                    <span>Services</span>
+                                    <span>thirdTest</span>
+                                </div>
+                            </a>
                             <a href="#" className="">BLOG</a>
                             <a href="#" className="">ABOUT</a>
                             <a href="#" className="">CONTACT</a>
