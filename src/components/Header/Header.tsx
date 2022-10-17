@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import {Link } from "react-router-dom";
 import BurgerMenu from './BurgerMenu/BurgerMenu';
 import s from './Header.module.scss'
 import PopupWindow from './PopupWindow/PopupWindow';
@@ -16,22 +17,24 @@ const Header: React.FC = () => {
             <div className="wrapper">
                 <div className={s.headerContent}>
                     <div className={s.headerLeft}>
-                        <a href='#' className={s.headerLeftLogo}>
-                            <p className={s.logoTextB}>DubaiRealty</p>
-                            <p className={s.logoTextS}>Real Estate</p>
+                        <a href='/' className={s.headerLeftLogo}>
+                            <Link to='..' relative='path'>
+                                <p className={s.logoTextB}>DubaiRealty</p>
+                                <p className={s.logoTextS}>Real Estate</p>
+                            </Link>
                         </a>
                         <nav className={s.headerNav}>
                             <a href="#" className={s.navA}>
                                 <span onClick={burgerMenuActive}>buy</span>
                                 <div className={handlerStylesNav}>
-                                    <a href="#">Category</a>
-                                    <a href="#">Services</a>
+                                    <a href="#" ><Link to={`/Category`}>Category</Link></a>
+                                    <a href="#" ><Link to={`/Services`}>Services</Link></a>
                                     <a href="#">third</a>
                                 </div>
                             </a>
-                            <a href="#" className={s.navA}>BLOG</a>
+                            <a href="#" className={s.navA}><Link to={`/Blog`}>BLOG</Link></a>
                             <a href="#" className={s.navA}>ABOUT</a>
-                            <a href="#" className={s.navA}>CONTACT</a>
+                            <a href="#" className={s.navA}><Link to={`/Contact`}>CONTACT</Link></a>
                         </nav>
                     </div>
                     <div className={s.headerRight}> 
