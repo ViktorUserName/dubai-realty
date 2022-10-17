@@ -7,7 +7,7 @@ const Header: React.FC = () => {
 
     const [menuActive, setMenuActive] = useState(false);
     const burgerMenuActive = () => setMenuActive(!menuActive)
-
+    const handlerStylesNav = menuActive ? s.navCont : s.navContNon;
     const [popupActive, setPopupActive] = useState(false);
     const popupMenuActive = () => setPopupActive(!popupActive)
 
@@ -16,22 +16,22 @@ const Header: React.FC = () => {
             <div className="wrapper">
                 <div className={s.headerContent}>
                     <div className={s.headerLeft}>
-                        <a href='#' className={s.logo}>
+                        <a href='#' className={s.headerLeftLogo}>
                             <p className={s.logoTextB}>DubaiRealty</p>
                             <p className={s.logoTextS}>Real Estate</p>
                         </a>
                         <nav className={s.headerNav}>
-                            <a href="#" className={s.test1Option}>
-                                <span>buy</span>
-                                <div className={s.test1}>
-                                    <span>Category</span>
-                                    <span>Services</span>
-                                    <span>thirdTest</span>
+                            <a href="#" className={s.navA}>
+                                <span onClick={burgerMenuActive}>buy</span>
+                                <div className={handlerStylesNav}>
+                                    <a href="#">Category</a>
+                                    <a href="#">Services</a>
+                                    <a href="#">third</a>
                                 </div>
                             </a>
-                            <a href="#" className="">BLOG</a>
-                            <a href="#" className="">ABOUT</a>
-                            <a href="#" className="">CONTACT</a>
+                            <a href="#" className={s.navA}>BLOG</a>
+                            <a href="#" className={s.navA}>ABOUT</a>
+                            <a href="#" className={s.navA}>CONTACT</a>
                         </nav>
                     </div>
                     <div className={s.headerRight}> 

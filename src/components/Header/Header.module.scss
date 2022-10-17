@@ -32,7 +32,7 @@
             left: 0;
             bottom: 0;
         }
-        & a {
+        &Logo {
             padding: 7px 0px 15px 15px;
         }
     }
@@ -128,26 +128,41 @@
     }
 }
 
-.test1 {
-    width: 247px;
-    height: 108px;
-    background: #272727;
-    position: absolute;
-    z-index: 2;
-    border: 1px #979797 solid;
-    padding-left: 15px;
-    padding-top: 10px;
-    display: flex;
-    flex-direction: column;
-    & > span {
-        height: 33%;
+.nav {
+    &A {
+        border-bottom: transparent 2px solid;
         &:hover {
-            color: red;
+            // position: absolute;
+            color: #FCD54C;
+            border-bottom: #FCD54C 2px solid;
         }
     }
-    &Option {
-        & > span:active {
-            color: #272727;
+    &Cont {
+        width: 247px;
+        height: 108px;
+        background: #272727;
+        position: absolute;
+        z-index: 2;
+        border: 1px #979797 solid;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #979797;
+        &Non {
+            visibility: hidden;
+            position: absolute;
+        }
+        & > a {
+            height: 33%;
+            padding: 10px 0 0 15px;
+            &:hover {
+                color: #272727;
+                background-color: #FCD54C;
+            }
+        }
+        &Option {
+            & > a:active {
+                color: #272727;
+            }
         }
     }
 }
