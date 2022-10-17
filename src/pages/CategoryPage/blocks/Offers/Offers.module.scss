@@ -1,5 +1,8 @@
 .offers {
     padding-bottom: 210px;
+    @media (max-width: 425px) {
+        padding-bottom: 100px;
+    }
     &H1 {
         font-family: 'Gilroy';
         font-style: normal;
@@ -9,6 +12,9 @@
         text-align: center;
         color: #FFFFFF;
         padding-bottom: 40px;
+        @media (max-width: 425px) {
+            font-size: 30px;
+        }
     }
     &Carts {
         display: flex;

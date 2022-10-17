@@ -3,6 +3,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        position: relative;
     }
     &H1 {
         font-family: 'Gilroy';
@@ -12,38 +13,70 @@
         line-height: 80px;
         color: #fffFFFFF;
         padding-bottom: 85px;
+        @media (max-width: 768px) {
+            text-align: center;
+            font-size: 30px;
+            line-height: 50px;
+            padding-bottom: 30px;
+        }
+        @media (max-width: 425px) {
+            padding-top: 30px;
+        }
     }
     &Slider {
-        padding-bottom: 144px;
+        padding-bottom: 100px;
         &Init {
-            height: 488px;
+            padding-bottom: 55px;
         }
     }
 }
 
 .cart {
-    width: 426px;
-    height: 433px;
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-    gap: 137px;
     opacity: 1;
-    transition: all 2s ease; 
-    & img {
-        z-index: -1;
-        position: absolute;
-    }
+    transition: all .3s ease; 
     &H2 {
+        position: absolute;
+        top: 50%;
         font-family: 'Gilroy';
         font-style: normal;
         font-weight: 700;
         font-size: 48px;
         line-height: 26px;
         color: #FFFFFF;
+        @media (max-width: 1450px) {
+            font-size: 30px;
+        }
+        @media (max-width: 575px) {
+            font-size: 20px;
+        }
+        
+        &Back {
+            position: absolute;
+            top: 10%;
+            left: 10%;
+            color: #272727 ;
+            font-family: 'Gilroy';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 48px;
+            line-height: 26px;
+            @media (max-width: 1450px) {
+                font-size: 30px;
+            }
+            @media (max-width: 575px) {
+                font-size: 20px;
+            }
+        }
     }
     &Button {
+        position: absolute;
+        bottom: 5%;
+        right: 5%;
         border: none;
         background: none;
         font-family: 'Work Sans';
@@ -52,51 +85,45 @@
         font-size: 16px;
         line-height: 24px;
         color: #FFFFFF;
-        position: relative;
-        top: -39px;
-        left: 134px;
         cursor: pointer;
         &Back {
             color: #272727;
         }
     }
     &Back {
-        width: 426px;
-        height: 433px;
-        background: #FCD54C;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-end;
-        visibility: visible;
-        opacity: 1;
-        transition: all 2s ease; 
+        & > .cartH2 {
+            display: none;
+        }
         & img {
             visibility: hidden;
+            transition: all .3s ease; 
         }
-        &H1 {
-            font-family: 'Gilroy';
+        position: relative;
+        max-width: 426px;
+        background: #FCD54C;
+        opacity: 1;
+        transition: all .3s ease; 
+        &P {
+            font-family: 'Work Sans';
             font-style: normal;
-            font-weight: 700;
-            font-size: 48px;
+            font-weight: 400;
+            font-size: 22px;
             line-height: 26px;
-            color: #272727;
-            position: relative;
-            top: -200px;
-        }
-        &H2 {
-            visibility: hidden;
-            &N {
-                font-family: 'Work Sans';
-                font-style: normal;
-                font-weight: 400;
-                font-size: 22px;
-                line-height: 26px;
-                color: #272727;
-                max-width: 365px;
-                position: relative;
-                top: -130px;
+            text-align: left;
+            margin-right: 10px;
+            position: absolute;
+            top: 40%;
+            left: 10%;
+            @media (max-width: 1450px) {
+                font-size: 16px;
+                top: 30%;
             }
+            @media (max-width: 870px) {
+                font-size: 14px;
+                line-height: 20px;
+            }
+        
+            
         }
     }
 }
