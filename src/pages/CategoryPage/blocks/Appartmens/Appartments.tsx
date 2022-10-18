@@ -30,16 +30,16 @@ const AppartCart: React.FC<IappartCard> = ({
     return (
         <div className={isNormal ? s.cartBack : s.cart}>
             <img src={img} alt="" />
-            <h2 className={isNormal ? s.cartBackH2 : s.cartH2}>{textH2}</h2>
+            <h2 className={s.cartH2}>{textH2}</h2>
             {isNormal &&
-            <>
-            <h1 className={s.cartBackH1}>Apartments</h1>
-            <h2 className={s.cartBackH2N}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat molestie integer aliquam consectetur. Faucibus vitae dui massa tellus magna sit.</h2>
-            </>
-             }
+                <>
+                <h1 className={isNormal ? s.cartH2Back : s.cartH2}>{textH2}</h1>
+                <p className={s.cartBackP}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat molestie integer aliquam consectetur. Faucibus vitae dui massa tellus magna sit.</p>
+                </>}
             <button className={isNormal ? s.cartButton + ' ' + s.cartButtonBack : s.cartButton} onClick={toggleIsNormal}>Learn more  {`>`}</button>
         </div>
-    
+
+                    // {isNormal ? s.cartButton + ' ' + s.cartButtonBack : s.cartButton
     )
 }
 
@@ -56,13 +56,27 @@ const Appartments: React.FC<IappartCardProps> = ({cardConfigAppart=[]}) => {
                     <div className={s.appartSlider}>
                         <Swiper
                             className={s.appartSliderInit}
-                            slidesPerView={4}
-                            // slidesPerGroup={4}
+                            slidesPerView={1}
+                            spaceBetween={15}
                             pagination={{ 
                                 clickable: true,
                                 modifierClass: 'swiper-pagination-appart-',
                             }}
                             modules={[Pagination]}
+                            breakpoints={{
+                                1150: {
+                                  slidesPerView: 4,
+                                  spaceBetween: 15
+                                },
+                                830: {
+                                    slidesPerView: 3,
+                                    spaceBetween: 15
+                                  },
+                                510: {
+                                    slidesPerView: 2,
+                                    spaceBetween: 15
+                                  },
+                            }}
                             >
                             {cardConfigAppart.map((post) => 
                                 <SwiperSlide>

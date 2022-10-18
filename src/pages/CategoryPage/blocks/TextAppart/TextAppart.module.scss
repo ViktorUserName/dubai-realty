@@ -1,5 +1,7 @@
 .text {
-    padding: 0 521px;
+    margin: 0 auto;
+    max-width: 880px;
+    padding: 0 15px;
     & p:last-child {
         padding-bottom: 160px;
     }
@@ -10,6 +12,9 @@
         font-size: 60px;
         line-height: 35px;
         color: #FFFFFF;
+        @media (max-width: 425px) {
+            font-size: 40px;
+        }
     }
     &P {
         font-family: 'Work Sans';

@@ -1,4 +1,7 @@
 .banner {
+    &I {
+        position: absolute;
+    }
     &Icons {
         position: absolute;
         right: 20px;
@@ -12,6 +15,7 @@
         background: linear-gradient(270deg, rgba(0, 0, 0, 0.4) 10.1%, rgba(0, 0, 0, 0) 76.11%), url(../../../../img/banner.png);
     }
     &Card {
+        position: relative;
         display: flex;
         flex-direction: column;
         align-items: flex-start;

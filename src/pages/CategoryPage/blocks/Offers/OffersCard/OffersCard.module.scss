@@ -24,6 +24,9 @@
         font-size: 16px;
         line-height: 24px;
         color: #FFFFFF;
+        @media (max-width: 425px) {
+            font-size: 14px;
+        }
     }
     &PU {
         font-family: 'Work Sans';
@@ -32,6 +35,9 @@
         font-size: 16px;
         line-height: 26px;
         color: #FFFFFF;
+        @media (max-width: 425px) {
+            font-size: 14px;
+        }
     }
     &H1 {
         font-family: 'Gilroy';
@@ -40,6 +46,9 @@
         font-size: 25px;
         line-height: 35px;
         color: #FFFFFF;
+        @media (max-width: 425px) {
+            font-size: 20px;
+        }
     }
     &PD {
         font-family: 'Work Sans';
@@ -49,5 +58,8 @@
         line-height: 26px;
         color: #929292;
         max-width: 280px;
+        @media (max-width: 425px) {
+            font-size: 14px;
+        }
     }
 }

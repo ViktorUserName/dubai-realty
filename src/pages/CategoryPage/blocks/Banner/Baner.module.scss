@@ -1,10 +1,10 @@
 .banner {
-    // padding-bottom: 120px;
-    // position: relative;
+    padding-bottom: 70px;
     &Content {
         display: flex;
         flex-direction: column;
         align-items: center;
+        position: relative;
     }
     &Img {
         width: 100%;
@@ -22,7 +22,17 @@
         & span {
             color: #FCD54C;
         }
-        position: relative;
-        top: -230px;
+        position: absolute;
+        bottom: 15%;
+        // @media (max-width: 1700px) {
+        //     bottom: 400px;
+        // }
+        @media (max-width: 850px) {
+            font-size: 46px;
+        }
+        @media (max-width: 500px) {
+            font-size: 24px;
+            line-height: 30px;
+        }
     }
 }

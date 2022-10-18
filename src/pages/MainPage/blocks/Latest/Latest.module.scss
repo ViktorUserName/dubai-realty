@@ -1,11 +1,20 @@
 .latest {
-    padding: 125px 0 125px 0;
+    padding: 125px 0;
+    @media (max-width: 320px){
+        padding: 78px 0;
+    }
 
     &Text {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         padding: 0 370px 125px;
+        @media (max-width: 1530px){
+            padding: 0 0 25px 0;
+        }
+        @media (max-width: 465px){
+            flex-direction: column;
+        }
         &H1 {
             font-family: 'Gilroy';
             font-style: normal;
@@ -13,6 +22,14 @@
             font-size: 48px;
             line-height: 69px;
             color: #FFFFFF;
+            @media (max-width: 768px){
+                font-size: 30px;
+                line-height: 37px;
+            }
+            @media (max-width: 320px){
+                font-size: 24px;
+                line-height: 30px;
+            }
         }
         &Examples {
             font-family: 'Work Sans';
@@ -21,11 +38,17 @@
             font-size: 16px;
             line-height: 21px;
             & a {
-            color: #FFFFFF;
+            color: #FFFFFF;   
                 &:hover {
                     color: #FCD54C;
                 }
-            }
+                @media (max-width: 768px){
+                    font-size: 12px;
+                    line-height: 14px;
+                }
+                @media (max-width: 320px){
+                    padding-top: 20px ;
+            }}
             display: flex;
             flex-direction: row;
             align-items: center;
@@ -43,17 +66,11 @@
 
     }
     &Slider {
-        height: 682px;
+        padding-bottom: 60px!important;
     }
     &Card {
         position: relative;
-        height: 572px;
-        width: 430px;
         background: linear-gradient(180deg, rgba(0, 0, 0, 0) 53.94%, rgba(0, 0, 0, 0.8) 100%);
-        &Img {
-            position: absolute;
-            z-index: -2;
-        }
         &Text {
             font-family: 'Gilroy';
             font-style: normal;
@@ -62,33 +79,31 @@
             line-height: 45px;
             color: #FFFFFF;
             position: absolute;
-            top: 450px;
+            top: 84%;
             left: 40px;
+            @media (max-width: 768px){
+                font-size: 18px;
+                line-height: 22px;
+                left: 15px;
+            }
         }
         &Back {
+            // padding: 46px 0 30px 44px;
             position: relative;
-            height: 572px;
-            width: 430px;
+
             background: #FCD54C;
-            visibility: visible;
             opacity: 1;
-            transition: all 2s ease; 
+            transition: all 1s ease; 
             & > img {
-                transition-delay: 1.5s;
+                transition-delay: .3s;
                 visibility: hidden;
                 opacity: 0;
             }
             & > .latestCardText {
-                transition-delay: 0.1s;
                 visibility: hidden;
                 opacity: 0;
             }
             &Text {
-                display: flex;
-                flex-direction: column;
-                padding: 46px 0 30px 44px;
-                align-items: flex-start;
-                gap: 130px;
                 &H2{
                     font-family: 'Gilroy';
                     font-style: normal;
@@ -96,6 +111,17 @@
                     font-size: 32px;
                     line-height: 45px;
                     color: #272727;
+                    position: absolute;
+                    top: 5%;
+                    left: 8%;
+                    @media (max-width: 768px){
+                        font-size: 18px;
+                        line-height: 22px;
+                    }
+                    @media (max-width: 320px){
+                        font-size: 18px;
+                        line-height: 22px;
+                    }
                 }
                 &P {
                     font-family: 'Work Sans';
@@ -105,6 +131,19 @@
                     line-height: 26px;
                     color: #272727;
                     max-width: 339px;
+                    margin-right: 10px;
+                    position: absolute;
+                    top: 35%;
+                    left: 8%;
+                    @media (max-width: 1050px){
+                        font-size: 12px;
+                        line-height: 14px;
+                        top: 25%;
+                    }
+                    @media (max-width: 320px){
+                        font-size: 10px;
+                        line-height: 12px;
+                    }
                 }
                 &Button {
                     border: none;
@@ -115,6 +154,18 @@
                     font-size: 20px;
                     line-height: 23px;
                     color: #272727;
+                    position: absolute;
+                    bottom: 5%;
+                    left: 8%;
+                    @media (max-width: 1050px){
+                        font-size: 12px;
+                        line-height: 14px
+                    }
+                    @media (max-width: 320px){
+                        font-size: 12px;
+                        line-height: 14px;
+                    }
+      
                 }
             }
         }

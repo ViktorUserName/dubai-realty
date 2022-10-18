@@ -27,11 +27,20 @@ const Workers: React.FC= () => {
             {/* <div className={s.workersWrapper}> */}
                 <Swiper
                         className={s.workersSwiper}
-                        // className='ggg'
-                        slidesPerView={2}
+                        slidesPerView={0.5}
                         spaceBetween={30}
-                        // slidesPerGroup={2}
-                        centeredSlides={true}
+                        breakpoints={{
+                            1090: {
+                                slidesPerView: 2,
+                                spaceBetween: 30,
+                                centeredSlides: true,
+                            },
+                            500: {
+                                slidesPerView: 1,
+                                spaceBetween: 30,
+                                centeredSlides: true,
+                            },
+                        }}
                         pagination={
                             {clickable: true,
                             modifierClass: 'swiper-pagination-workers-'

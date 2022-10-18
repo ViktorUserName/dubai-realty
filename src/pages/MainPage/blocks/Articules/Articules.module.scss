@@ -1,13 +1,23 @@
 .articules {
     &Content {
-        padding: 140px 340px 160px;
-        // display: flex;
+        margin: 140px auto 160px;
+        display: flex;
+        flex-direction: column;
+        @media (max-width: 768px) {
+            margin: 70px auto 80px;
+        }
     }
     &Text {
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding-bottom: 90px;
+        @media (max-width: 1760px) {
+            justify-content: space-around;
+        }
+        @media (max-width: 640px) {
+            padding-bottom: 30px;
+        }
         &H1 {
             font-family: 'Gilroy';
             font-style: normal;
@@ -17,6 +27,18 @@
             display: flex;
             align-items: center;
             color: #FFFFFF;
+            @media (max-width: 1760px) {
+                font-size: 50px;
+                line-height: 67px;
+            }
+            @media (max-width: 768px) {
+                font-size: 30px;
+                line-height: 37px;
+            }
+            @media (max-width: 340px) {
+                font-size: 24px;
+                line-height: 30px;
+            }
         }
         &P {
             font-family: 'Gilroy';
@@ -27,11 +49,21 @@
             display: flex;
             align-items: center;
             color: #929292;
+            @media (max-width: 768px) {
+                font-size: 12px;
+                line-height: 15px;
+            }
         }
     }
     &Carts {
         display: flex;
+        justify-content: center;
         gap: 30px;
+        @media (max-width: 1760px) {
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
 
     }
     &Cart {
@@ -49,16 +81,26 @@
                 font-size: 25px;
                 line-height: 35px;
                 color: #FFFFFF;
+                @media (max-width:768px){
+                    content: none;
+                }
             }
+
         }
         &Text {
-            width: 350px;
+            // width: 350px;
             display: flex;
             padding: 70px 35px 30px;
             border: 1px solid #FCD54C;
             flex-direction: column;
             justify-content: space-between;
             align-items: flex-start;
+            @media (max-width:768px){
+                padding: 50px 33px 30px;
+            }
+            @media (max-width: 768px) {
+                gap: 20px;
+            }
             &H1 {
                 font-family: 'Gilroy';
                 font-style: normal;
@@ -67,6 +109,10 @@
                 line-height: 35px;
                 color: #FFFFFF;
                 position: relative;
+                @media (max-width:768px){
+                    font-size: 18px;
+                    line-height: 22px;
+                }
                 &::before {
                     content: 'Jule 03, 2022';
                     font-family: 'Work Sans';
@@ -77,6 +123,10 @@
                     color: #FFFFFF;
                     position: absolute;
                     top: -35px;
+                    @media (max-width:768px){
+                        font-size: 12px;
+                        line-height: 14px;
+                    }
                 }
             }
             &P {
@@ -87,6 +137,10 @@
                 line-height: 26px;
                 color: #929292;
                 max-width: 280px;
+                @media (max-width:768px){
+                    font-size: 12px;
+                    line-height: 14px;
+                }
             }
             &Button {
                 border: none;
@@ -97,7 +151,10 @@
                 font-size: 16px;
                 line-height: 24px;
                 color: #FCD54C;
-
+                @media (max-width:768px){
+                    font-size: 12px;
+                    line-height: 0px;
+                }
             }
         }
     }
