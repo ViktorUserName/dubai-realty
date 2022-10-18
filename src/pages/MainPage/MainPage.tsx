@@ -17,7 +17,7 @@ const MainPage = () => {
     const {results: postsFaq} = faqData;
     return (
         <>
-        {/* <Banner/> */}
+        <Banner/>
         <Latest/>
         <Expertise/>
         <Limit cardConfig={postsLimit} /> 

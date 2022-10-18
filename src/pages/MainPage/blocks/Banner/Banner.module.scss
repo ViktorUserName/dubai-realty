@@ -1,7 +1,4 @@
 .banner {
-    &I {
-        position: absolute;
-    }
     &Icons {
         position: absolute;
         right: 20px;
@@ -9,25 +6,44 @@
         display: flex;
         flex-direction: column;
         gap: 20px;
+        @media (max-width:470px){
+            display: none;
+        }
     }
     &Swiper {
-        height: 971px;
-        background: linear-gradient(270deg, rgba(0, 0, 0, 0.4) 10.1%, rgba(0, 0, 0, 0) 76.11%), url(../../../../img/banner.png);
+        @media (max-width:760px){
+            padding-bottom: 70px!important;
+        }
     }
     &Card {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        max-width: 742px;
-        gap: 15px;
-        position: absolute;
-        top: 260px;
-        left: 375px;
-        border-left: 4px solid #FCD54C;
-        padding: 44px 0 51px 28px;
-        &::before {
-            content: '';
+        background: linear-gradient(270deg, rgba(0, 0, 0, 0.4) 10.1%, rgba(0, 0, 0, 0) 76.11%);
+        &Info{
+            position: absolute;
+            top: 27%;
+            left: 25%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            max-width: 742px;
+            gap: 15px;
+            border-left: 4px solid #FCD54C;
+            padding: 44px 0 51px 28px;
+            @media (max-width:1220px){
+                top: 15%;
+                left: 15%;
+                max-width: 422px;
+                padding: 34px 0 21px 25px;
+            }
+            @media (max-width:1000px){
+                top: 10%;
+                left: 5%;
+            }
+            @media (max-width:600px){
+                padding: 17px 0 15px 15px;
+                gap: 10px;
+            }
+            &::before {
+                content: '';
             border-top: 4px solid #FCD54C;
             width: 115px;
             height: 3px;
@@ -43,6 +59,7 @@
             position: absolute;
             left: 0;
             bottom: 0;
+        }       
         }
     }
     &H1 {
@@ -55,6 +72,16 @@
         &Span {
             color: #FCD54C;
         }
+        @media (max-width:1000px){
+            font-size: 50px;
+            line-height: 64px;
+        }
+        @media (max-width:600px){
+            font-size: 30px;
+            line-height: 37px;
+            max-width: 230px;
+            line-height: 38px;
+        }
     }
     &P {
         font-family: 'Work Sans';
@@ -64,6 +91,14 @@
         line-height: 19px;
         text-transform: uppercase;
         color: #FFFFFF;
+        @media (max-width:1220px){
+            font-size: 10px;
+            line-height: 12px;
+        }
+        @media (max-width:600px){
+            font-size: 10px;
+            line-height: 12px;
+        }
     }
     &Button {
         font-family: 'Work Sans';
@@ -74,7 +109,14 @@
         color: #FFFFFF;
         background: none;
         border: none;
-        
+        @media (max-width:1220px){
+            font-size: 16px;
+            line-height: 19px;
+        }
+        @media (max-width:600px){
+            font-size: 12px;
+            line-height: 14px;
+        }
     }
 }
 
