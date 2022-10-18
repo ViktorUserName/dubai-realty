@@ -25,8 +25,16 @@ const Header: React.FC = () => {
                         </a>
                         <nav className={s.headerNav}>
                             <a href="#" className={s.navA}>
-                                <span onClick={burgerMenuActive}>buy</span>
-                                <div className={handlerStylesNav}>
+                                <span 
+                                onMouseEnter={() => setMenuActive(true)}
+                                onMouseLeave={() => setMenuActive(false)}
+                                >
+                                    buy
+                                </span>
+                                <div className={handlerStylesNav}
+                                onMouseEnter={() => setMenuActive(true)}
+                                onMouseLeave={() => setMenuActive(false)}
+                                >
                                     <a href="#" ><Link to={`/Category`}>Category</Link></a>
                                     <a href="#" ><Link to={`/Services`}>Services</Link></a>
                                     <a href="#">third</a>

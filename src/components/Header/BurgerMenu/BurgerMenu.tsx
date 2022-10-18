@@ -1,4 +1,5 @@
 import React, { FC, MouseEventHandler, useState } from 'react';
+import {Link } from "react-router-dom";
 import PopupWindow from '../PopupWindow/PopupWindow';
 import s from "./BurgerMenu.module.scss";
 
@@ -28,15 +29,21 @@ const BurgerMenu: FC<MenuСondition> = (props) => {
                     <a className={s.burgerMenuContentTopLink} href="#" onClick={props.onClick}>
                     Buy
                     </a>
+                    <Link to={`/Blog`}>
                     <a className={s.burgerMenuContentTopLink} href="#" onClick={props.onClick}>
                     Blog
                     </a>
+                    </Link>
+                    <Link to={`/About`}>
                     <a className={s.burgerMenuContentTopLink} href="#" onClick={props.onClick}>
                     About
                     </a>
+                    </Link>
+                    <Link to={`/Contact`}>
                     <a className={s.burgerMenuContentTopLink} href="#" onClick={props.onClick}>
                     Contact
                     </a>
+                    </Link>
                 </div>
                 <div className={s.burgerMenuContentBottom}>
                     <button  
