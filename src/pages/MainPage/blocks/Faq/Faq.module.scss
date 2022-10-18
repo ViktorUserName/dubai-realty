@@ -1,7 +1,9 @@
 .faq {
-    // padding-bottom: 122px;
+    padding-bottom: 60px;
     &Content {
-        padding: 0 405px;
+        padding: 0 30px;
+        margin: 0 auto;
+        max-width: 1040px;
     }
     &H1 {
         font-family: 'Gilroy';
@@ -11,6 +13,14 @@
         line-height: 60px;
         color: #FFFFFF;
         padding-bottom: 30px;
+        @media (max-width:768px){
+            font-size: 30px;
+            line-height: 37px;
+        }
+        @media (max-width:400px){
+            font-size: 24px;
+            line-height: 30px;
+        }
     }
     &Carts {
         display: flex;
@@ -34,6 +44,14 @@
             color: #FFFFFF;
             position: relative;
             padding: 20px 0;
+            @media (max-width:768px){
+                font-size: 16px;
+                line-height: 21px;
+            }
+            @media (max-width:500px){
+                font-size: 12px;
+                line-height: 16px;
+            }
             &Main {
                 display: flex;
                 align-items: center;
@@ -48,6 +66,9 @@
                 line-height: 160%;
                 color: #E8E8E8;
                 max-width: 980px;
+                @media (max-width:768px){
+                    font-size: 12px;
+                }
             }
             &::after {
                 content: '';

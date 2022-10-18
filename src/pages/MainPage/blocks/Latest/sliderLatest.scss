@@ -3,6 +3,9 @@
     left: 50%;
     display: flex;
     gap: 13px;
+    @media (max-width: 500px){
+        left: 38%;
+    }
     & > .swiper-pagination-bullet {
         width: 13px;
         height: 13px;

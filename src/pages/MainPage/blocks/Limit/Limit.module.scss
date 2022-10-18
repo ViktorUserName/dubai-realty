@@ -1,7 +1,9 @@
 .limit {
     padding-bottom: 115px;
     &Content {
-        padding: 0 335px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     &H2 {
         font-family: 'Gilroy';
@@ -12,17 +14,29 @@
         max-width: 919px;
         border: 1px solid #FCD54C;
         color: #FFFFFF;
-        text-align: center;
         padding: 70px 95px 70px 95px;
         margin-bottom: 113px;
         box-sizing: content-box;
         & > span {
             color: #FCD54C;
         }
+        @media (max-width: 768px){
+            padding: 38px 60px;
+            font-size: 18px;
+            line-height: 22px;
+            margin-bottom: 60px;
+        }
+        @media (max-width: 320px){
+            font-size: 16px;
+            line-height: 26px;
+        }
     }
     &Cards {
         display: flex;
         gap: 23px;
+        @media (max-width: 320px){
+            flex-direction: column;
+        }
     }
     &Card {
         max-width: 543px;
@@ -34,6 +48,11 @@
             font-size: 18px;
             line-height: 160%;
             color: #E8E8E8;
+            @media (max-width: 768px){
+                font-size: 14px;
+                line-height: 22px;
+                padding-top: 30px;
+            }
         }
     }
 }
