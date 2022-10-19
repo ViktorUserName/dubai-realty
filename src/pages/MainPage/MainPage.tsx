@@ -10,11 +10,13 @@ import Workers from './blocks/Worker/Workers';
 import Faq from './blocks/Faq/Faq';
 import AddFooter from '../../components/AddFooter/AddFooter';
 import faqData from '../../SharedLogic/FaqData.json'
+import addFooterData from '../../components/AddFooter/SharedLogic/textS.json'
 
 
 const MainPage = () => {
     const {results: postsLimit} = data;
     const {results: postsFaq} = faqData;
+    const {results: postsaddFooter} = addFooterData;
     return (
         <>
         <Banner/>
@@ -25,7 +27,7 @@ const MainPage = () => {
         <Articules/>
         <Workers/>
         <Faq cardFaqConfig={postsFaq}/>
-        {/* <AddFooter/> */}
+        {/* <AddFooter IfootAConfig={postsaddFooter}/> */}
         </>
     );
 };

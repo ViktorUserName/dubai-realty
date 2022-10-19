@@ -56,45 +56,118 @@
             opacity: 0.6;
         }
     }
-    &Options {
+//     &Options {
+//         display: flex;
+//         flex-direction: row;
+//         gap: 184px;
+//         font-family: 'Work Sans';
+//         font-style: normal;
+//         font-weight: 400;
+//         font-size: 18px;
+//         line-height: 21px;
+//         color: #E8E8E8;
+//         &Text {
+//             display: flex;
+//             flex-direction: column;
+//             gap: 20px;  
+//             &H1 {
+//                 padding: 50px 0 20px 0;
+//             }
+//             &A {
+//             font-family: 'Work Sans';
+//             font-style: normal;
+//             font-weight: 300;
+//             font-size: 18px;
+//             line-height: 21px;
+//             color: #E8E8E8;
+//         }
+//     }
+//     }
+}
+
+// .button {
+//     margin-top: 70px;
+//     width: 165px;
+//     height: 41px;
+//     background: #FCD54C;
+//     font-family: 'Work Sans';
+//     font-style: normal;
+//     font-weight: 600;
+//     font-size: 14px;
+//     line-height: 16px;
+//     color: #000000;
+//     cursor: pointer;
+// }
+
+.option { 
+    display: flex;
+    &Up {
         display: flex;
-        flex-direction: row;
-        gap: 184px;
+    }
+    @media (max-width: 768px){
+        flex-direction: column;
+        gap: 30px;
+        
+    }
+    &Group{
+        
+    } 
+    &Name{
+        position: relative;
         font-family: 'Work Sans';
         font-style: normal;
         font-weight: 400;
         font-size: 18px;
         line-height: 21px;
         color: #E8E8E8;
-        &Text {
+        & > button {display: none;}
+        @media (max-width: 768px){
             display: flex;
-            flex-direction: column;
-            gap: 20px;  
-            &H1 {
-                padding: 50px 0 20px 0;
+            justify-content: space-between;
+            & > button {
+                cursor: pointer;
+                display: block;
+                border: none;
+                background: none;
+                color: #929292;
+                font-size: 20px;
             }
-            &A {
-            font-family: 'Work Sans';
-            font-style: normal;
-            font-weight: 300;
-            font-size: 18px;
-            line-height: 21px;
-            color: #E8E8E8;
+            &::after{
+                position: absolute;
+                bottom: -15px;
+                left: 0;
+                content: '';
+                width: 100%;
+                border-bottom: 1px solid #3A3A3A;;
+            }
         }
     }
+    &A {
+        font-family: 'Work Sans';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 21px;
+        color: #E8E8E8;
+        &content {
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+            padding: 25px 0 0 20px;
+        }
     }
 }
 
-.button {
-    margin-top: 70px;
-    width: 165px;
-    height: 41px;
-    background: #FCD54C;
-    font-family: 'Work Sans';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 16px;
-    color: #000000;
-    cursor: pointer;
+
+
+.test{
+    &B{
+        background: red;
+        transform: rotate(90deg);
+        transition: .5s ease;
+    }
+    &Off {
+        background: black;
+        transition: .5s ease;
+    }
 }

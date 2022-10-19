@@ -1,6 +1,6 @@
 .swiper-pagination.swiper-pagination-clickable.swiper-pagination-appart-bullets.swiper-pagination-horizontal {
     bottom: 0px;
-    left: 50%;
+    left: calc(50% - 50px);;
     display: flex;
     gap: 13px;
     & > span {

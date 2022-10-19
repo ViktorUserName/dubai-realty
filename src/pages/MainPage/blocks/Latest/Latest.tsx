@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import s from './Latest.module.scss'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Grid } from 'swiper';
@@ -11,37 +11,23 @@ import latestCard1 from '../../../../img/latestCard1.png'
 import latestCard2 from '../../../../img/latestCard2.png'
 import latestCard3 from '../../../../img/latestCard3.png'
 
-// const [isShown, setIsShown] = useState(false);
-
-// return (
-//   <div className="App">
-//     <button
-//       onMouseEnter={() => setIsShown(true)}
-//       onMouseLeave={() => setIsShown(false)}>
-const LatestCard: React.FC = () => {
-    const [isShown, setIsShown] = useState(false);
-
-    // const toggleIsLoading = () => {
-    //   setIsLoading(current => !current);
-    // };
-
+interface LatestCardProps {
+    img: string,
+}
+const LatestCard: React.FC<LatestCardProps> = ({
+    img
+}) => {
     return (
-        // <div className={isLoading ? s.latestCardBack : s.latestCard} onClick={toggleIsLoading}>
-
-        <div className={isShown ? s.latestCardBack : s.latestCard}
-        onMouseEnter={() => setIsShown(true)}
-        onMouseLeave={() => setIsShown(false)}>
-            <img src={latestCard1} className={s.latestCardImg} alt="" />
-            <h2 className={s.latestCardText}>Villas</h2>
-            {isShown &&
-            //  <div className={s.latestCardBackText}>
-            <>
-                <h2 className={s.latestCardBackTextH2}>Dubai</h2>
-                <p className={s.latestCardBackTextP}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat molestie integer aliquam consectetur. Faucibus vitae dui massa tellus magna sit.</p>
-                <button className={s.latestCardBackTextButton}>See project   {`>`}</button>
-            </>
-            // {/* //  </div> */}
-            }
+        <div className={s.latestCard}>
+            <div className={s.latestCardPrev}>
+                <img src={img} className={s.latestCardPrevImg} alt="" />
+                <h2 className={s.latestCardPrevText}>Villas</h2>
+            </div>
+            <div className={s.latestCardActive}>
+                <h2 className={s.latestCardActiveTitle}>Dubai</h2>
+                <p className={s.latestCardActiveSubtitle}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat molestie integer aliquam consectetur. Faucibus vitae dui massa tellus magna sit.</p>
+                <a href='#' className={s.latestCardBackTextButton}>See project   {`>`}</a>
+            </div>
         </div>
     )
 }
@@ -63,9 +49,9 @@ const Latest: React.FC = () => {
                     <Swiper
                         className={s.latestSlider}
                         modules={[Pagination, Grid]}
-                            
-                        slidesPerView={1}
-                        slidesPerGroup={4}
+                        spaceBetween={20}
+                        slidesPerView={2}
+                        slidesPerGroup={2}
                         pagination={{ 
                             clickable: true,
                             modifierClass: 'swiper-pagination-latest-',
@@ -75,23 +61,22 @@ const Latest: React.FC = () => {
                               slidesPerView: 4,
                               spaceBetween: 10
                             },
-                            320: {
-                                slidesPerView: 2,
+                            550: {
+                                slidesPerView: 3,
                                 spaceBetween: 10,
                                 slidesPerGroup: 2,
                             }
                         }}
                         >
-                            <SwiperSlide><LatestCard/></SwiperSlide>
-                            <SwiperSlide><LatestCard/></SwiperSlide>
-                            <SwiperSlide><LatestCard/></SwiperSlide>
-                            <SwiperSlide><LatestCard/></SwiperSlide>
-                            <SwiperSlide><LatestCard/></SwiperSlide>
-                            <SwiperSlide><LatestCard/></SwiperSlide>
-                            <SwiperSlide><LatestCard/></SwiperSlide>
-                            <SwiperSlide><LatestCard/></SwiperSlide>
-                            <SwiperSlide><LatestCard/></SwiperSlide>
-                            <SwiperSlide><LatestCard/></SwiperSlide>
+                            <SwiperSlide><LatestCard img={latestCard1}/></SwiperSlide>
+                            <SwiperSlide><LatestCard img={latestCard2}/></SwiperSlide>
+                            <SwiperSlide><LatestCard img={latestCard3}/></SwiperSlide>
+                            <SwiperSlide><LatestCard img={latestCard1}/></SwiperSlide>
+                            <SwiperSlide><LatestCard img={latestCard2}/></SwiperSlide>
+                            <SwiperSlide><LatestCard img={latestCard3}/></SwiperSlide>
+                            <SwiperSlide><LatestCard img={latestCard1}/></SwiperSlide>
+                            <SwiperSlide><LatestCard img={latestCard2}/></SwiperSlide>
+                            <SwiperSlide><LatestCard img={latestCard3}/></SwiperSlide>
                     </Swiper>
                 </div>
             </div>
