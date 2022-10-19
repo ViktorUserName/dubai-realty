@@ -26,7 +26,7 @@ const LatestCard: React.FC<LatestCardProps> = ({
             <div className={s.latestCardActive}>
                 <h2 className={s.latestCardActiveTitle}>Dubai</h2>
                 <p className={s.latestCardActiveSubtitle}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat molestie integer aliquam consectetur. Faucibus vitae dui massa tellus magna sit.</p>
-                <a href='#' className={s.latestCardBackTextButton}>See project   {`>`}</a>
+                <a href='#' className={s.latestCardActiveButton}>See project   {`>`}</a>
             </div>
         </div>
     )
