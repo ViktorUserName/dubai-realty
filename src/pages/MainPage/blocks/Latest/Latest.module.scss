@@ -70,50 +70,61 @@
     }
     &Card {
         position: relative;
-        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 53.94%, rgba(0, 0, 0, 0.8) 100%);
-        &Text {
-            font-family: 'Gilroy';
-            font-style: normal;
-            font-weight: 700;
-            font-size: 32px;
-            line-height: 45px;
-            color: #FFFFFF;
-            position: absolute;
-            top: 84%;
-            left: 40px;
-            @media (max-width: 768px){
-                font-size: 18px;
-                line-height: 22px;
-                left: 15px;
-            }
-        }
-        &Back {
-            // padding: 46px 0 30px 44px;
+        overflow: hidden;
+        &Prev{
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            display: block;
             position: relative;
-
-            background: #FCD54C;
-            opacity: 1;
-            transition: all 1s ease; 
-            & > img {
-                transition-delay: .3s;
-                visibility: hidden;
-                opacity: 0;
-            }
-            & > .latestCardText {
-                visibility: hidden;
-                opacity: 0;
+            &Img{
+                height: 100%;
+                display: block;
             }
             &Text {
-                &H2{
+                font-family: 'Gilroy';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 32px;
+                line-height: 45px;
+                color: #FFFFFF;
+                position: absolute;
+                bottom: 10%;
+                left: 5%;
+                @media (max-width: 768px){
+                    font-size: 18px;
+                    line-height: 22px;
+                    left: 15px;
+                }
+        }
+    }
+        &Active {
+                height: 100%;
+                z-index: 2;
+                width: 100%;
+                opacity: 0;
+                background: #FCD54C;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                transition: all .5s;
+                padding: 0 35px;
+                position: absolute;
+                left: 0;
+                top: 0;
+                @media (max-width: 1357px){
+                    padding: 0 20px;
+                }
+                @media (max-width: 380px){
+                    padding: 0 10px;
+                }
+            &Title {
                     font-family: 'Gilroy';
                     font-style: normal;
                     font-weight: 700;
                     font-size: 32px;
                     line-height: 45px;
                     color: #272727;
-                    position: absolute;
-                    top: 5%;
-                    left: 8%;
                     @media (max-width: 768px){
                         font-size: 18px;
                         line-height: 22px;
@@ -122,52 +133,53 @@
                         font-size: 18px;
                         line-height: 22px;
                     }
+            }
+            &Subtitle {
+                font-family: 'Work Sans';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 22px;
+                line-height: 26px;
+                color: #272727;
+                max-width: 339px;
+                // margin-right: 10px;
+                @media (max-width: 1357px){
+                    font-size: 16px;
+                    line-height: 22px;
                 }
-                &P {
-                    font-family: 'Work Sans';
-                    font-style: normal;
-                    font-weight: 400;
-                    font-size: 22px;
-                    line-height: 26px;
-                    color: #272727;
-                    max-width: 339px;
-                    margin-right: 10px;
-                    position: absolute;
-                    top: 35%;
-                    left: 8%;
-                    @media (max-width: 1050px){
-                        font-size: 12px;
-                        line-height: 14px;
-                        top: 25%;
-                    }
-                    @media (max-width: 320px){
-                        font-size: 10px;
-                        line-height: 12px;
-                    }
+                @media (max-width: 967px){
+                    font-size: 12px;
+                    line-height: 14px;
                 }
-                &Button {
-                    border: none;
-                    background: none;
-                    font-family: 'Work Sans';
-                    font-style: normal;
-                    font-weight: 700;
-                    font-size: 20px;
-                    line-height: 23px;
-                    color: #272727;
-                    position: absolute;
-                    bottom: 5%;
-                    left: 8%;
-                    @media (max-width: 1050px){
-                        font-size: 12px;
-                        line-height: 14px
-                    }
-                    @media (max-width: 320px){
-                        font-size: 12px;
-                        line-height: 14px;
-                    }
-      
+                @media (max-width: 380px){
+                    font-size: 10px;
+                    line-height: 12px;
                 }
+            }
+            &Button {
+                border: none;
+                background: none;
+                font-family: 'Work Sans';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 23px;
+                color: #272727;
+                @media (max-width: 1050px){
+                    font-size: 12px;
+                    line-height: 14px
+                }
+                @media (max-width: 320px){
+                    font-size: 12px;
+                    line-height: 14px;
+                }
+  
             }
         }
     }
+}
+
+.latestCard:hover
+.latestCardActive {
+    opacity: 2;
 }

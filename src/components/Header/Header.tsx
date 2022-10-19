@@ -17,12 +17,10 @@ const Header: React.FC = () => {
             <div className="wrapper">
                 <div className={s.headerContent}>
                     <div className={s.headerLeft}>
-                        <a href='/' className={s.headerLeftLogo}>
-                            <Link to='..' relative='path'>
+                        <Link to='..' relative='path' className={s.headerLeftLogo}>
                                 <p className={s.logoTextB}>DubaiRealty</p>
                                 <p className={s.logoTextS}>Real Estate</p>
-                            </Link>
-                        </a>
+                        </Link>
                         <nav className={s.headerNav}>
                             <a href="#" className={s.navA}>
                                 <span 
@@ -35,14 +33,14 @@ const Header: React.FC = () => {
                                 onMouseEnter={() => setMenuActive(true)}
                                 onMouseLeave={() => setMenuActive(false)}
                                 >
-                                    <a href="#" ><Link to={`/Category`}>Category</Link></a>
-                                    <a href="#" ><Link to={`/Services`}>Services</Link></a>
+                                    <Link to={`/Category`}>Category</Link>
+                                    <Link to={`/Services`}>Services</Link>
                                     <a href="#">third</a>
                                 </div>
                             </a>
-                            <a href="#" className={s.navA}><Link to={`/Blog`}>BLOG</Link></a>
+                            <Link to={`/Blog`} className={s.navA}>BLOG</Link>
                             <a href="#" className={s.navA}>ABOUT</a>
-                            <a href="#" className={s.navA}><Link to={`/Contact`}>CONTACT</Link></a>
+                            <Link to={`/Contact`} className={s.navA}>CONTACT</Link>
                         </nav>
                     </div>
                     <div className={s.headerRight}> 

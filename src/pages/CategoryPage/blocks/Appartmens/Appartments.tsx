@@ -21,25 +21,27 @@ const AppartCart: React.FC<IappartCard> = ({
     textH2
 }) => {
 
-    const [isNormal, setIsNormal] = useState(false);
+    // const [isNormal, setIsNormal] = useState(false);
 
-    const toggleIsNormal = () => {
-        setIsNormal(current => !current);
-    };
+    // const toggleIsNormal = () => {
+    //     setIsNormal(current => !current);
+    // };
 
     return (
-        <div className={isNormal ? s.cartBack : s.cart}>
-            <img src={img} alt="" />
-            <h2 className={s.cartH2}>{textH2}</h2>
-            {isNormal &&
-                <>
-                <h1 className={isNormal ? s.cartH2Back : s.cartH2}>{textH2}</h1>
-                <p className={s.cartBackP}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat molestie integer aliquam consectetur. Faucibus vitae dui massa tellus magna sit.</p>
-                </>}
-            <button className={isNormal ? s.cartButton + ' ' + s.cartButtonBack : s.cartButton} onClick={toggleIsNormal}>Learn more  {`>`}</button>
+        <div className={s.cart}>
+            <div className={s.cartPrev}>
+                <img src={img} alt="" />
+                <h2 className={s.cartPrevTitle}>{textH2}</h2>
+            </div>
+    
+            <div className={s.cartActive}>
+                <h2 className={s.cartActiveH2}>{textH2}</h2>
+                <p className={s.cartActiveP}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat molestie integer aliquam consectetur. Faucibus vitae dui massa tellus magna sit.</p>
+                <button className={s.cartActiveButton}>Learn more  {`>`}</button>
+            </div>
+                
         </div>
 
-                    // {isNormal ? s.cartButton + ' ' + s.cartButtonBack : s.cartButton
     )
 }
 
@@ -64,7 +66,7 @@ const Appartments: React.FC<IappartCardProps> = ({cardConfigAppart=[]}) => {
                             }}
                             modules={[Pagination]}
                             breakpoints={{
-                                1150: {
+                                1290: {
                                   slidesPerView: 4,
                                   spaceBetween: 15
                                 },

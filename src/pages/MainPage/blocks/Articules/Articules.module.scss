@@ -55,21 +55,31 @@
             }
         }
     }
-    &Carts {
+    &Cards {
         display: flex;
         justify-content: center;
         gap: 30px;
-        @media (max-width: 1760px) {
-            flex-direction: column;
-            align-items: center;
-            gap: 15px;
+        @media (max-width: 1067px) {
+            flex-wrap: wrap;
         }
+        // @media (max-width: 350px) {
+        //     flex-direction: column;
+        //     align-items: center;
+        //     gap: 15px;
+        // }
 
+    }
+    &Carts {
+        transition: all .5s;
+        position: relative;
     }
     &Cart {
         &Img {
-            position: relative;
-            background: linear-gradient(360deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 56.96%);
+            
+            & > img {
+                height: 100%;
+                display: block;
+            }
             &::after {
                 content: 'Discover Architecture';   
                 position: absolute;
@@ -81,20 +91,28 @@
                 font-size: 25px;
                 line-height: 35px;
                 color: #FFFFFF;
-                @media (max-width:768px){
-                    content: none;
+                @media (max-width:370px){
+                    font-size: 22px;
+                    left: 30px;
                 }
             }
 
         }
-        &Text {
-            // width: 350px;
+        &Active {
             display: flex;
+            height: 100%;
+            width: 100%;
             padding: 70px 35px 30px;
             border: 1px solid #FCD54C;
+            background: #272727;
             flex-direction: column;
             justify-content: space-between;
             align-items: flex-start;
+            opacity: 0;
+            transition: all .5s;
+            position: absolute;
+            top: 0;
+            left: 0;
             @media (max-width:768px){
                 padding: 50px 33px 30px;
             }
@@ -109,10 +127,6 @@
                 line-height: 35px;
                 color: #FFFFFF;
                 position: relative;
-                @media (max-width:768px){
-                    font-size: 18px;
-                    line-height: 22px;
-                }
                 &::before {
                     content: 'Jule 03, 2022';
                     font-family: 'Work Sans';
@@ -137,10 +151,6 @@
                 line-height: 26px;
                 color: #929292;
                 max-width: 280px;
-                @media (max-width:768px){
-                    font-size: 12px;
-                    line-height: 14px;
-                }
             }
             &Button {
                 border: none;
@@ -151,6 +161,7 @@
                 font-size: 16px;
                 line-height: 24px;
                 color: #FCD54C;
+                cursor: pointer;
                 @media (max-width:768px){
                     font-size: 12px;
                     line-height: 0px;
@@ -158,4 +169,9 @@
             }
         }
     }
+}
+
+.articulesCarts:hover
+.articulesCartActive {
+    opacity: 2;
 }

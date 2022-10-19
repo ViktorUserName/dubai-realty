@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import s from './Banner.module.scss'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/scss';
@@ -9,11 +9,17 @@ import './slider.scss'
 import ContactsIcons from '../../../../components/ContactsIcons/ContactsIcons';
 import imgB from '../../../../img/banner.png'
 import imgS from '../../../../img/bannerS.png'
+import PopupWindow from '../../../../components/Header/PopupWindow/PopupWindow';
 
 
 const Card: React.FC = () => {
+
+    const [popupActive, setPopupActive] = useState(false);
+    const popupMenuActive = () => setPopupActive(!popupActive)
+
     return (
-        <div className={s.bannerCard}>
+        <>
+            <div className={s.bannerCard}>
             {
                 window.innerWidth <= 380 && <img src={imgS} alt="" className={s.bannerI} /> || 
                 window.innerWidth >= 381 && <img src={imgB} alt="" className={s.bannerI} />
@@ -21,9 +27,12 @@ const Card: React.FC = () => {
             <div className={s.bannerCardInfo}>
                 <p className={s.bannerP}>Lorem ipsum</p>
                 <h1 className={s.bannerH1}>Welcome Home <span className={s.bannerH1Span}>To</span> Luxury</h1>
-                <button className={s.bannerButton}>Book a consultation {'>'}</button>
+                {/* <button onClick= {popupMenuActive}
+                className={s.bannerButton}>Book a consultation {'>'}</button> */}
             </div>
-        </div>
+            </div>
+            <PopupWindow change={popupActive} onClick={popupMenuActive}/>
+        </>
     )
 }
 
@@ -51,6 +60,7 @@ const Banner: React.FC = () => {
                     </Swiper>
             </div>
             </div>
+            
         </main>
     );
 };

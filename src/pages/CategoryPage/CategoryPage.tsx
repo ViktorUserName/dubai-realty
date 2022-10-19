@@ -8,12 +8,15 @@ import s from './CategoryPage.module.scss'
 import DataAppart from './SharedLogic/Appart.json'
 import DataOffers from './SharedLogic/offersCard.json'
 import AddFooter from '../../components/AddFooter/AddFooter';
+import addFooterData from '../../components/AddFooter/SharedLogic/textS.json'
 
 
 const CategoryPage: React.FC = () => {
     
     const {results: postAppart} = DataAppart;
     const {results: postOffers} = DataOffers;
+    const {results: postsaddFooter} = addFooterData;
+
 
 
     return (
@@ -23,7 +26,7 @@ const CategoryPage: React.FC = () => {
         <Offers cardConfigOffers={postOffers}/>
         <TextAppart/>
         <ContactUs/>
-        <AddFooter/>
+        {/* <AddFooter IfootAConfig={postsaddFooter}/> */}
         </>
     );
 };
