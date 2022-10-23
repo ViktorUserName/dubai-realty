@@ -8,12 +8,22 @@ interface MenuСondition {
     onClick: MouseEventHandler;
 }
 
+// const buyDivCont: React.FC = () => {
+//     return (
+
+//     )
+// }
+
 const BurgerMenu: FC<MenuСondition> = (props) => {
 
     const [popupActive, setPopupActive] = useState(false);
     const popupMenuActive = () => setPopupActive(!popupActive)
+    const [buyActive, setBuyActive] =useState(false);
+    const buyMenuActive = () => setBuyActive(!buyActive);
 
     const handlerStylesBurgerMenu = props.change ? s.burgerMenuActive : s.burgerMenu;
+    const handlerStylesBuyMenu = buyActive ? s.burgerMenuBuyActive : s.burgerMenuBuy;
+
 
     return (
         <>
@@ -26,23 +36,22 @@ const BurgerMenu: FC<MenuСondition> = (props) => {
                 onClick={e => e.stopPropagation()}
             >
                 <div className={s.burgerMenuContentTop}>
-                    <a className={s.burgerMenuContentTopLink} href="#" onClick={props.onClick}>
+                    <a className={s.burgerMenuContentTopLink} href="#" onClick={buyMenuActive}>
                     Buy
                     </a>
-                    <Link to={`/Blog`}>
-                    <a className={s.burgerMenuContentTopLink} href="#" onClick={props.onClick}>
+                        <div className={handlerStylesBuyMenu}>
+                                <Link to={`/Category`} onClick={props.onClick}>Category</Link>
+                                <Link to={`/Services`} onClick={props.onClick}>Services</Link>
+                                <a href="#" onClick={props.onClick}>third</a>
+                        </div>
+                    <Link to={`/Blog`} className={s.burgerMenuContentTopLink} onClick={props.onClick}>
                     Blog
-                    </a>
                     </Link>
-                    <Link to={`/About`}>
-                    <a className={s.burgerMenuContentTopLink} href="#" onClick={props.onClick}>
+                    <Link to={`/About` } className={s.burgerMenuContentTopLink} onClick={props.onClick}>
                     About
-                    </a>
                     </Link>
-                    <Link to={`/Contact`}>
-                    <a className={s.burgerMenuContentTopLink} href="#" onClick={props.onClick}>
+                    <Link to={`/Contact`} className={s.burgerMenuContentTopLink} onClick={props.onClick}>
                     Contact
-                    </a>
                     </Link>
                 </div>
                 <div className={s.burgerMenuContentBottom}>
