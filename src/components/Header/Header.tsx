@@ -4,6 +4,21 @@ import BurgerMenu from './BurgerMenu/BurgerMenu';
 import s from './Header.module.scss'
 import PopupWindow from './PopupWindow/PopupWindow';
 
+
+export const HeaderBlockC: React.FC =()=> {
+    const [menuActive, setMenuActive] = useState(false);
+    const handlerStylesNav = menuActive ? s.navCont : s.navContNon;
+    return (
+        <div className={handlerStylesNav}
+        onMouseEnter={() => setMenuActive(true)}
+        onMouseLeave={() => setMenuActive(false)}
+        >
+            <Link to={`/Category`}>Category</Link>
+            <Link to={`/Services`}>Services</Link>
+            <a href="#">third</a>
+        </div>
+    )
+}
 const Header: React.FC = () => {
 
     const [menuActive, setMenuActive] = useState(false);
