@@ -99,6 +99,47 @@
         }
     }
         &Active {
+            & > a {
+                
+                    border: none;
+                    background: none;
+                    font-family: 'Work Sans';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 20px;
+                    line-height: 23px;
+                    color: #272727;
+                    @media (max-width: 1050px){
+                        font-size: 12px;
+                        line-height: 14px
+                    }
+                    @media (max-width: 320px){
+                        font-size: 12px;
+                        line-height: 14px;
+                    }
+      
+                
+            }
+                {
+                    border: none;
+                    background: none;
+                    font-family: 'Work Sans';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 20px;
+                    line-height: 23px;
+                    color: #272727;
+                    @media (max-width: 1050px){
+                        font-size: 12px;
+                        line-height: 14px
+                    }
+                    @media (max-width: 320px){
+                        font-size: 12px;
+                        line-height: 14px;
+                    }
+      
+                }
+            }
                 height: 100%;
                 z-index: 2;
                 width: 100%;
@@ -155,25 +196,6 @@
                     font-size: 10px;
                     line-height: 12px;
                 }
-            }
-            &Button {
-                border: none;
-                background: none;
-                font-family: 'Work Sans';
-                font-style: normal;
-                font-weight: 700;
-                font-size: 20px;
-                line-height: 23px;
-                color: #272727;
-                @media (max-width: 1050px){
-                    font-size: 12px;
-                    line-height: 14px
-                }
-                @media (max-width: 320px){
-                    font-size: 12px;
-                    line-height: 14px;
-                }
-  
             }
         }
     }
